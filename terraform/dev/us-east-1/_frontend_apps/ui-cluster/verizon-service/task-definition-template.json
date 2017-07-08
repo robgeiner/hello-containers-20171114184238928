@@ -1,0 +1,29 @@
+[
+  {
+      "image": "${app_repository_url}:${app_version}",
+      "name": "${app_name}",
+      "cpu": ${cpu},
+      "memory": ${memory},
+      "essential": true,
+      "portMappings": [
+          {
+              "containerPort": ${port},
+              "hostPort": 0
+          }
+      ],
+      "environment" : [
+          { "name" : "BACKGROUND", "value" : "${background}" },
+          { "name" : "LOGGER_LEVEL", "value" : "${log_level}" },
+          { "name" : "PORT", "value" : "${port}" },
+          { "name" : "PROFILER", "value" : "${profiler}" },
+          { "name" : "ENV", "value" : "${environment}" }
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "tmp",
+          "containerPath": "/data/",
+          "readOnly": false
+        }
+      ]
+  }
+]

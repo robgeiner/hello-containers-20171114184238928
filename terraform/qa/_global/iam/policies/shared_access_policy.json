@@ -1,0 +1,29 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:Get*",
+                "s3:List*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::sun-qa-twc",
+                "arn:aws:s3:::sun-qa-twc/*",
+                "arn:aws:s3:::sun-qa-keys",
+                "arn:aws:s3:::sun-qa-keys/*",
+                "arn:aws:s3:::sun-qa-bootstrap",
+                "arn:aws:s3:::sun-qa-bootstrap/*",
+                "arn:aws:s3:::twc-puppet-files",
+                "arn:aws:s3:::twc-puppet-files/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:*Tags"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
