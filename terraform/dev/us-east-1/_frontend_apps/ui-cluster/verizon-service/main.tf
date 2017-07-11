@@ -16,7 +16,7 @@ resource "aws_alb_listener_rule" "verizon" {
   }
   condition {
     field  = "path-pattern"
-    values = ["${data.terraform_remote_state.service-registry.verizon_path}"]
+    values = ["${data.terraform_remote_state.service-registry.verizon_path}${data.terraform_remote_state.service-registry.verizon_api_key}*"]
   }
 }
 
@@ -34,6 +34,13 @@ data "template_file" "task_template" {
         port = "${var.port}"
         project = "${var.PROJECT}"
         profiler = "${var.profiler}"
+        storage = "${var.storage}"
+        redis_host = "${data.terraform_remote_state.ec-redis.endpoint}"
+        redis_port = "${data.terraform_remote_state.ec-redis.port}"
+        api_key = "${data.terraform_remote_state.service-registry.verizon_api_key}"
+        twitter_consumer_key =  "${var.TWITTER_CONSUMER_KEY}"
+        twitter_consumer_secret = "${var.TWITTER_CONSUMER_SECRET}"
+        twitter_callback_url = "https://ui.${data.terraform_remote_state.route53.domain}${data.terraform_remote_state.service-registry.verizon_path}${data.terraform_remote_state.service-registry.verizon_api_key}/auth/twitter/callback"
     }
 }
 

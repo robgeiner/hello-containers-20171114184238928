@@ -1,17 +1,15 @@
-variable "version" {
-  default = "14"
-}
+variable "version" { default = "17" }
 
 variable "log_level" {
   default = "info"
 }
 
 variable "desired_count" {
-  default = "2"
+  default = "1"
 }
 
 variable "asg_min" {
-  default = "2"
+  default = "1"
 }
 
 variable "asg_max" {
@@ -30,6 +28,10 @@ variable "port" {
   default = "9000"
 }
 
+variable "storage" {
+  default = "MEMORY"
+}
+
 variable "profiler" {
   default = "false"
 }
@@ -37,3 +39,7 @@ variable "profiler" {
 variable "background" {
   default = "false"
 }
+
+variable "TWITTER_CONSUMER_KEY" {}
+
+variable "TWITTER_CONSUMER_SECRET" {}

@@ -16,7 +16,14 @@
           { "name" : "LOGGER_LEVEL", "value" : "${log_level}" },
           { "name" : "PORT", "value" : "${port}" },
           { "name" : "PROFILER", "value" : "${profiler}" },
-          { "name" : "ENV", "value" : "${environment}" }
+          { "name" : "ENV", "value" : "${environment}" },
+          { "name" : "STORAGE", "value" : "${storage}" },
+          { "name" : "REDIS_PORT", "value" : "${redis_port}" },
+          { "name" : "REDIS_HOST", "value" : "${redis_host}" },
+          { "name" : "API_KEY", "value" : "${api_key}" },
+          { "name" : "TWITTER_CONSUMER_KEY", "value" : "${twitter_consumer_key}" },
+          { "name" : "TWITTER_CONSUMER_SECRET", "value" : "${twitter_consumer_secret}" },
+          { "name" : "TWITTER_CALLBACK_URL", "value" : "${twitter_callback_url}" }
       ],
       "mountPoints": [
         {

@@ -7,7 +7,7 @@ variable "cluster_short_name" {
 }
 
 variable "asg_min" {
-  default = "2"
+  default = "1"
 }
 
 variable "asg_max" {
