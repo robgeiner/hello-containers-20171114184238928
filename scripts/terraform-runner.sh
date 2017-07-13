@@ -251,6 +251,22 @@ case "$VERB" in
         check_terraform_status "$?" 'init'
         #rm -f terraform.tfstate*
         ;;
+    clean)
+        echo "Info: running terraform $VERB on $DIR in environment $ENV and region ${REGION}."
+        echo ">>>>>>>> Do you want to CLEAN $DIR"
+        echo ">>>>>>>> Confirm CLEAN by entering: 'clean'"
+        read RESPONSE
+        if [ $RESPONSE == 'clean' ]; then
+          rm -f "$TERRAFORM_DIR/_backend.tf"
+          rm -f "$TERRAFORM_DIR/_variables.tf"
+          rm -f "$TERRAFORM_DIR/.log"
+          rm -rf "$TERRAFORM_DIR/.terraform"
+          rm -rf "$TERRAFORM_DIR/terraform.tfstate.backup"
+        else
+          echo "Response: $RESPONSE"
+          exit 0
+        fi
+        ;;
     init-remote)
         echo "Info: running terraform $VERB on $DIR in environment $ENV and region ${REGION}."
         echo "Info: running steps required to create remote S3 and initialize the remote state S3 Bucket:" \

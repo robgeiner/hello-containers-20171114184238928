@@ -1,43 +1,31 @@
 output "vpc_id" {
-  value = "${data.terraform_remote_state.vpc.vpc_id}"
+  value = "${module.cog_iso_vpc.vpc_id}"
 }
 
-output "basic_access_sg_id" {
-  value = "${data.terraform_remote_state.vpc.basic_access_sg}"
+output "public_subnet_ids" {
+  value = "${module.cog_iso_vpc.public_subnet_ids}"
 }
 
-output "internal_sg_id" {
-  value = "${data.terraform_remote_state.vpc.internal_sg}"
+output "private_subnet_ids" {
+  value = "${module.cog_iso_vpc.private_subnet_ids}"
 }
 
-output "public_1_subnet_ids" {
-  value = "${data.terraform_remote_state.vpc.public_1_ids}"
+output "public_subnet_zones" {
+  value = "${var.vpc_cog_zones}"
 }
 
-output "public_1_subnet_zones" {
-  value = "${data.terraform_remote_state.vpc.public_1_zones}"
+output "private_subnet_zones" {
+  value = "${var.vpc_cog_zones}"
 }
 
-output "public_2_subnet_ids" {
-  value = "${data.terraform_remote_state.vpc.public_2_ids}"
+output "availability_zones" {
+  value = "${var.vpc_cog_zones}"
 }
 
-output "public_2_subnet_zones" {
-  value = "${data.terraform_remote_state.vpc.public_2_zones}"
+output "region_obj" {
+  value = "${var.REGION}"
 }
 
-output "private_1_subnet_ids" {
-  value = "${data.terraform_remote_state.vpc.private_1_ids}"
-}
-
-output "private_1_subnet_zones" {
-  value = "${data.terraform_remote_state.vpc.private_1_zones}"
-}
-
-output "private_2_subnet_ids" {
-  value = "${data.terraform_remote_state.vpc.private_2_ids}"
-}
-
-output "private_2_subnet_zones" {
-  value = "${data.terraform_remote_state.vpc.private_2_zones}"
+output "region_local" {
+  value = "${var.REGION}"
 }

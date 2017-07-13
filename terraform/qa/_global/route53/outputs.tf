@@ -1,6 +1,11 @@
 output "zone_id" {
-  value = "ZB9HMAAB4ZXDV"
+  value = "Z1DDB688T1R4QF"
 }
-output "route53_domain" {
-  value = "qa.sun.weather.com"
+
+output "domain" {
+  value = "qa.cogads.weather.com"
+}
+
+output "certificate_arn" {
+  value = "arn:aws:iam::543488454177:server-certificate/wildcard-qa.cogads.weather.com-2019-09-20"
 }

@@ -1,23 +1,15 @@
-output "basic_role_name" {
-  value = "${aws_iam_role.basic_role.name}"
+output "baseInstanceRole_name" {
+  value = "${module.iam.baseInstanceRole_name}"
 }
 
-output "basic_profile_name" {
-  value = "${aws_iam_instance_profile.basic_profile.name}"
+output "baseInstanceProfile_name" {
+  value = "${module.iam.baseInstanceProfile_name}"
 }
 
-output "basic_role_arn" {
-  value = "${aws_iam_role.basic_role.arn}"
+output "ecsServiceRole_arn" {
+  value = "${module.iam.ecsServiceRole_arn}"
 }
 
-output "varnish_role_name" {
-  value = "${aws_iam_role.varnish_role.name}"
-}
-
-output "varnish_profile_name" {
-  value = "${aws_iam_instance_profile.varnish_profile.name}"
-}
-
-output "varnish_role_arn" {
-  value = "${aws_iam_role.varnish_role.arn}"
+output "ecsApplAutoscalingRole_arn" {
+  value = "${module.iam.ecsApplAutoscalingRole_arn}"
 }
