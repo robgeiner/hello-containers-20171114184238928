@@ -246,25 +246,26 @@ case "$VERB" in
                 > "$TERRAFORM_DIR/_backend.tf"
         fi
 
-        "$TFBIN" init | tee "./$date_file.$VERB"
+        "$TFBIN" init -lock=false | tee "./$date_file.$VERB"
         write_output_to_s3 "./$date_file.$VERB"
         check_terraform_status "$?" 'init'
         #rm -f terraform.tfstate*
         ;;
     clean)
         echo "Info: running terraform $VERB on $DIR in environment $ENV and region ${REGION}."
+        echo ">>>>>>>>"
         echo ">>>>>>>> Do you want to CLEAN $DIR"
-        echo ">>>>>>>> Confirm CLEAN by entering: 'clean'"
+        echo ">>>>>>>> Confirm CLEAN by entering the ENV: '$ENV'"
         read RESPONSE
-        if [ $RESPONSE == 'clean' ]; then
+        if [ $RESPONSE == $ENV ]; then
           rm -f "$TERRAFORM_DIR/_backend.tf"
           rm -f "$TERRAFORM_DIR/_variables.tf"
           rm -f "$TERRAFORM_DIR/.log"
           rm -rf "$TERRAFORM_DIR/.terraform"
           rm -rf "$TERRAFORM_DIR/terraform.tfstate.backup"
         else
-          echo "Response: $RESPONSE"
-          exit 0
+          echo "NOT CLEANING - Response: $RESPONSE"
+          exit 1
         fi
         ;;
     init-remote)

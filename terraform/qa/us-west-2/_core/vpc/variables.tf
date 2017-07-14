@@ -13,6 +13,6 @@ variable "vpc_cog_private_subnet_cidrs" {
 }
 
 variable "vpc_cog_zones" {
-  default = [ "d", "c", "b" ]
+  default = [ "c", "b", "a" ]
   type = "list"
 }

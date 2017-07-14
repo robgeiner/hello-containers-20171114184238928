@@ -1,11 +1,11 @@
 output "zone_id" {
-  value = "Z3NZ1VOYE9MFRP"
+  value = "${var.zone_id}"
 }
 
 output "domain" {
-  value = "dev.cogads.weather.com"
+  value = "${var.domain}"
 }
 
 output "certificate_arn" {
-  value = "arn:aws:iam::${var.AWS_ACCOUNT_ID}:server-certificate/wildcard-dev.cogads.weather.com-2019-09-20"
+  value = "${var.certificate_arn}"
 }

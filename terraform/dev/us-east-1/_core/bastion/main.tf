@@ -3,6 +3,7 @@ module "bastion" {
   environment           = "${var.ENVIRONMENT}"
   region                = "${var.REGION}"
   project               = "${var.PROJECT}"
+  billing_code          = "${var.BILLING_CODE}"
   zone_id               = "${data.terraform_remote_state.route53.zone_id}"
   vpc_id                = "${data.terraform_remote_state.vpc.vpc_id}"
   public_subnet_ids     = "${data.terraform_remote_state.vpc.public_subnet_ids}"

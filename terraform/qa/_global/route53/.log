@@ -16,3 +16,5 @@ cognitive-devops-dev-remote-state-bucket/dev/_global/route53/log/1499295833.appl
 cognitive-devops-qa-remote-state-bucket/qa/_global/route53/log/1499954838.init
 cognitive-devops-qa-remote-state-bucket/qa/_global/route53/log/1499954865.plan
 cognitive-devops-qa-remote-state-bucket/qa/_global/route53/log/1499954896.apply
+cognitive-devops-qa-remote-state-bucket/qa/_global/route53/log/1499978939.apply
+cognitive-devops-qa-remote-state-bucket/qa/_global/route53/log/1499979412.apply

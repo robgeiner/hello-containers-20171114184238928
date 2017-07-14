@@ -1,11 +1,2 @@
-cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/ui-cluster/service-registry/log/1499302440.init
-cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/ui-cluster/service-registry/log/1499302478.apply
-cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/ui-cluster/service-registry/log/1499483020.plan
-cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/ui-cluster/service-registry/log/1499483041.apply
-cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/ui-cluster/service-registry/log/1499527048.plan
-cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/ui-cluster/service-registry/log/1499527064.apply
-cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/ui-cluster/service-registry/log/1499529767.apply
-cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/ui-cluster/service-registry/log/1499698019.apply
-cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/ui-cluster/service-registry/log/1499703576.apply
-cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/ui-cluster/service-registry/log/1499703654.apply
-cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/ui-cluster/service-registry/log/1499797443.apply
+cognitive-devops-qa-remote-state-bucket/qa/us-east-1/_frontend_apps/ui-cluster/service-registry/log/1499971756.init
+cognitive-devops-qa-remote-state-bucket/qa/us-east-1/_frontend_apps/ui-cluster/service-registry/log/1499971793.apply

@@ -119,7 +119,7 @@ resource "aws_alb_listener" "public-listener" {
 
 resource "aws_route53_record" "cogads-ui-shortname" {
   zone_id = "${data.terraform_remote_state.route53.zone_id}"
-  name = "ui"
+  name = "ui-${var.ENVIRONMENT}-${var.REGION}"
   type = "CNAME"
   ttl = "60"
   records = ["${module.alb-public.dns_name}"]

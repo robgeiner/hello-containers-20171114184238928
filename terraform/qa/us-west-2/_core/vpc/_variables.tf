@@ -7,7 +7,10 @@ variable "REMOTE_STATE_BUCKET_NAME" {}
 variable "REGION" {}
 variable "ENVIRONMENT" {}
 variable "PROJECT" {}
+variable "PROJECT_BUCKET_PREFIX" {}
+variable "AWS_ACCOUNT_ID" {}
 variable "CHEF_ENVIRONMENT" {}
+variable "CHEF_ORGANIZATION" {}
 variable "CHEF_VALIDATION_CLIENT_NAME" {}
 variable "CHEF_VALIDATION_KEY_PATH" {}
 variable "CHEF_SERVER_URL" {}
