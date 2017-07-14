@@ -1,7 +1,7 @@
-variable "version" { default = "17" }
+variable "version" { default = "20" }
 
 variable "log_level" {
-  default = "info"
+  default = "debug"
 }
 
 variable "desired_count" {
@@ -29,7 +29,7 @@ variable "port" {
 }
 
 variable "storage" {
-  default = "MEMORY"
+  default = "REDIS"
 }
 
 variable "profiler" {

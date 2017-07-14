@@ -29,7 +29,7 @@ variable "port" {
 }
 
 variable "storage" {
-  default = "MEMORY"
+  default = "REDIS"
 }
 
 variable "profiler" {
