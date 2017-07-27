@@ -47,27 +47,9 @@ if [ -z "$INPUT" ]; then
     exit 1
 fi
 
-echo "Step 1: Get Credentials:"
-# If running locally, make sure you have your AWS profile set properly in
-# terraform.tfvars and it's pointing to a valid profile name in your ~/.aws/
-# credentials file.
 
-echo $OSTYPE
-if [[ $OSTYPE != darwin* ]]; then
-    echo "Info: I'm running from an EC2 Instance, I'll get my credentials from my meta-data url."
-    echo $AWS_ACCESS_KEY_ID
-    echo $AWS_SECRET_ACCESS_KEY
-    export AWS_PROFILE_NAME=
-    #export AWS_ACCESS_KEY_ID="$aws_access_key_id"
-    #export AWS_SECRET_ACCESS_KEY="$aws_secret_access_key"
-    #export AWS_SESSION_TOKEN="$token"
-else
-    echo "Info: I'm running on a local machine or a box that isn't on EC2, I'll get " \
-         "my credentials from my AWS profile."
-         local="true"
-fi
 
-echo "Step 2: Get terraform.{action}(directory) information:"
+echo "Step 1: Get terraform.{action}(directory) information:"
 
 regex='^terraform.(.*)\((.*)\)'
 if [[ "$INPUT" =~ $regex ]]; then
@@ -79,6 +61,30 @@ if [[ "$INPUT" =~ $regex ]]; then
 else
     echo "Error: unable to parse input with regular expression. Exiting..."
     exit 1
+fi
+
+echo "Step 1: Get Credentials:"
+# If running locally, make sure you have your AWS profile set properly in
+# terraform.tfvars and it's pointing to a valid profile name in your ~/.aws/
+# credentials file.
+
+if [[ $OSTYPE != darwin* ]]; then
+    echo "Info: I'm running from an EC2 Instance, I'll get my credentials from my meta-data url."
+    echo $AWS_ACCESS_KEY_ID
+    echo $AWS_SECRET_ACCESS_KEY
+    if [ $ENV == 'prod' ]; then
+        export BOTO_CONFIG=/var/lib/jenkins/.boto_config/boto_cogads_prod.cfg
+    else
+    	export BOTO_CONFIG=/var/lib/jenkins/.boto_config/boto_cogads_nonprod.cfg
+    fi
+    export AWS_PROFILE_NAME=
+    #export AWS_ACCESS_KEY_ID="$aws_access_key_id"
+    #export AWS_SECRET_ACCESS_KEY="$aws_secret_access_key"
+    #export AWS_SESSION_TOKEN="$token"
+else
+    echo "Info: I'm running on a local machine or a box that isn't on EC2, I'll get " \
+         "my credentials from my AWS profile."
+         local="true"
 fi
 
 if [ "$REGION" == '_global' ]; then
