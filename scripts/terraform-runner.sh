@@ -70,20 +70,12 @@ echo "Step 1: Get Credentials:"
 
 if [[ $OSTYPE != darwin* ]]; then
     echo "Info: I'm running from an EC2 Instance, I'll get my credentials from my meta-data url."
-    export AWS_ACCESS_KEY=${AWS_ACCESS_KEY_ID}
-    export AWS_SECRET_ACCESS=${AWS_SECRET_ACCESS_KEY}
-    export aws_secret_access_id=${AWS_ACCESS_KEY_ID}
-    export aws_secret_access_key=${AWS_SECRET_ACCESS_KEY}
-    export AWS_DEFAULT_REGION="us-east-1"
-    export AWS_PROFILE_NAME=''
-    if [ $ENV == 'prod' ]; then
-      export BOTO_CONFIG=/var/lib/jenkins/.boto_config/boto_cogads_prod.cfg
-    else
-    	export BOTO_CONFIG=/var/lib/jenkins/.boto_config/boto_cogads_nonprod.cfg
-    fi
+    echo ${AWS_ACCESS_KEY_ID}
+    echo ${AWS_SECRET_ACCESS_KEY}
     #export AWS_ACCESS_KEY_ID="$aws_access_key_id"
     #export AWS_SECRET_ACCESS_KEY="$aws_secret_access_key"
     #export AWS_SESSION_TOKEN="$token"
+    local="false"
 else
     echo "Info: I'm running on a local machine or a box that isn't on EC2, I'll get " \
          "my credentials from my AWS profile."
@@ -131,13 +123,14 @@ if [ "$local" == "true" ]; then
     aws_secret_access_key=`cat ~/.aws/credentials | grep "$AWS_PROFILE_NAME" -A 5 | grep aws_secret_access_key | awk '{print $3}'`
     token=`cat ~/.aws/credentials | grep "$AWS_PROFILE_NAME" -A 5 | grep aws_session_token | awk '{print $3}'`
 fi
-
-secrets_filename=${TF_VAR_PROJECT}-secrets-${ENV}.properties
-aws s3 cp s3://${TF_VAR_OWNER_NAME}-${ENV}-tfconfig/${secrets_filename} ./${secrets_filename}
-source ./${secrets_filename}
-echo "Sourcing secrets: ${secrets_filename}"
-rm ./${secrets_filename}
-echo ">>>>> ${TF_VAR_REPOSITORY_AUTH_DATA_URL}"
+echo ${AWS_ACCESS_KEY_ID}
+echo ${AWS_SECRET_ACCESS_KEY}
+#secrets_filename=${TF_VAR_PROJECT}-secrets-${ENV}.properties
+#aws s3 cp s3://${TF_VAR_OWNER_NAME}-${ENV}-tfconfig/${secrets_filename} ./${secrets_filename}
+#source ./${secrets_filename}
+#echo "Sourcing secrets: ${secrets_filename}"
+#rm ./${secrets_filename}
+#echo ">>>>> ${TF_VAR_REPOSITORY_AUTH_DATA_URL}"
 
 echo "Step 3: Run terraform with options"
 
