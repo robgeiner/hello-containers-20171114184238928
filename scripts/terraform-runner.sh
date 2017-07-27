@@ -73,6 +73,11 @@ if [[ $OSTYPE != darwin* ]]; then
     export aws_secret_access_id=${AWS_ACCESS_KEY_ID}
     export aws_secret_access_key=${AWS_SECRET_ACCESS_KEY}
     export AWS_PROFILE_NAME=
+    if [ $ENVIRONMENT == 'prod' ]; then
+      export BOTO_CONFIG=/var/lib/jenkins/.boto_config/boto_cogads_prod.cfg
+    else
+    	export BOTO_CONFIG=/var/lib/jenkins/.boto_config/boto_cogads_nonprod.cfg
+    fi
     #export AWS_ACCESS_KEY_ID="$aws_access_key_id"
     #export AWS_SECRET_ACCESS_KEY="$aws_secret_access_key"
     #export AWS_SESSION_TOKEN="$token"
