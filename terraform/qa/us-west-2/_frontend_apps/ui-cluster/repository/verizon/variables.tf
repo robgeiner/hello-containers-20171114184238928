@@ -1,5 +1,5 @@
 variable "name" {
-  default = "cognitive-ads-ui-verizon"
+  default = "cognitive-ads-ui-convo-verizon"
 }
 
 variable "namespace" {

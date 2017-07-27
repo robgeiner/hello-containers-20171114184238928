@@ -1,4 +1,4 @@
-variable "version" { default = "17" }
+variable "version" { default = "3" }
 
 variable "log_level" {
   default = "info"
@@ -30,6 +30,11 @@ variable "port" {
 
 variable "storage" {
   default = "REDIS"
+}
+
+variable "debug_options" {
+  default = ""
+  #default = "connect:redis,express-session"
 }
 
 variable "profiler" {

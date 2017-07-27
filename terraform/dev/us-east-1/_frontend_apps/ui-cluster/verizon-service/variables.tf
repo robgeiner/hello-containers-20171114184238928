@@ -1,15 +1,15 @@
-variable "version" { default = "20" }
+variable "version" { default = "8" }
 
 variable "log_level" {
-  default = "debug"
+  default = "info"
 }
 
 variable "desired_count" {
-  default = "1"
+  default = "2"
 }
 
 variable "asg_min" {
-  default = "1"
+  default = "2"
 }
 
 variable "asg_max" {
@@ -38,6 +38,11 @@ variable "profiler" {
 
 variable "background" {
   default = "false"
+}
+
+variable "debug_options" {
+  default = ""
+  #default = "connect:redis,express-session"
 }
 
 variable "TWITTER_CONSUMER_KEY" {}

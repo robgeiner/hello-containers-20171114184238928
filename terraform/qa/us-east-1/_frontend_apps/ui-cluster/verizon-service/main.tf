@@ -30,6 +30,7 @@ data "template_file" "task_template" {
         background = "${var.background}"
         environment = "${var.ENVIRONMENT}"
         log_level = "${var.log_level}"
+        debug_options = "${var.debug_options}"
         memory = "${var.memory}"
         port = "${var.port}"
         project = "${var.PROJECT}"

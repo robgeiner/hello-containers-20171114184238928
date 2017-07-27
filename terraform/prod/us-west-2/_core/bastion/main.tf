@@ -1,0 +1,18 @@
+module "bastion" {
+  source = "git::ssh://git@github.com/TheWeatherCompany/cognitive-terraform-modules.git//terraform/bastion"
+  environment           = "${var.ENVIRONMENT}"
+  region                = "${var.REGION}"
+  project               = "${var.PROJECT}"
+  billing_code          = "${var.BILLING_CODE}"
+  zone_id               = "${data.terraform_remote_state.route53.zone_id}"
+  vpc_id                = "${data.terraform_remote_state.vpc.vpc_id}"
+  public_subnet_ids     = "${data.terraform_remote_state.vpc.public_subnet_ids}"
+  additional_ips        = "${var.additional_ips}"
+  instance_key_name     = "${var.SSH_KEY_NAME}"
+  chef_server_url       = "${var.CHEF_SERVER_URL}"
+  chef_environment      = "${var.CHEF_ENVIRONMENT}"
+  chef_run_list         = "${var.chef_run_list}"
+  chef_username         = "${var.CHEF_VALIDATION_CLIENT_NAME}"
+  chef_user_key         = "${var.CHEF_VALIDATION_KEY_PATH}"
+  chef_client_version   = "${var.chef_version}"
+}

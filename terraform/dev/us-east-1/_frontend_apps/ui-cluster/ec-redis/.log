@@ -8,3 +8,5 @@ cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/ui-cluster
 cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/ui-cluster/ec-redis/log/1499713229.apply
 cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/ui-cluster/ec-redis/log/1499714001.apply
 cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/ui-cluster/ec-redis/log/1499714791.apply
+cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/ui-cluster/ec-redis/log/1500295243.destroy
+cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/ui-cluster/ec-redis/log/1500295932.apply

@@ -22,6 +22,8 @@
           { "name" : "PORT", "value" : "${port}" },
           { "name" : "PROFILER", "value" : "${profiler}" },
           { "name" : "ENV", "value" : "${environment}" },
+          { "name" : "NODE_ENV", "value" : "${environment}" },
+          { "name" : "DEBUG", "value" : "${debug_options}" },
           { "name" : "STORAGE", "value" : "${storage}" },
           { "name" : "REDIS_PORT", "value" : "${redis_port}" },
           { "name" : "REDIS_HOST", "value" : "${redis_host}" },

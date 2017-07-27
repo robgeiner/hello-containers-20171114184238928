@@ -1,0 +1,59 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "useast1-pub",
+      "Action": "s3:PutObject",
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::${project}-${env}-${region}-${suffix}/public/AWSLogs/${account_id}/*",
+      "Principal": {
+        "AWS": "127311923021"
+      }
+    },
+    {
+      "Sid": "useast1-priv",
+      "Action": "s3:PutObject",
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::${project}-${env}-${region}-${suffix}/private/AWSLogs/${account_id}/*",
+      "Principal": {
+        "AWS": "127311923021"
+      }
+    },
+    {
+      "Sid": "useast2-pub",
+      "Action": "s3:PutObject",
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::${project}-${env}-${region}-${suffix}/public/AWSLogs/${account_id}/*",
+      "Principal": {
+        "AWS": "033677994240"
+      }
+    },
+    {
+      "Sid": "useast2-priv",
+      "Action": "s3:PutObject",
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::${project}-${env}-${region}-${suffix}/private/AWSLogs/${account_id}/*",
+      "Principal": {
+        "AWS": "033677994240"
+      }
+    },
+    {
+      "Sid": "uswest2-pub",
+      "Action": "s3:PutObject",
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::${project}-${env}-${region}-${suffix}/public/AWSLogs/${account_id}/*",
+      "Principal": {
+        "AWS": "797873946194"
+      }
+    },
+    {
+      "Sid": "uswest2-priv",
+      "Action": "s3:PutObject",
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::${project}-${env}-${region}-${suffix}/private/AWSLogs/${account_id}/*",
+      "Principal": {
+        "AWS": "797873946194"
+      }
+    }
+  ]
+}
