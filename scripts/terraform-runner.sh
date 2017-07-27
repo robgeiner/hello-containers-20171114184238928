@@ -70,13 +70,8 @@ echo "Step 1: Get Credentials:"
 
 if [[ $OSTYPE != darwin* ]]; then
     echo "Info: I'm running from an EC2 Instance, I'll get my credentials from my meta-data url."
-    echo $AWS_ACCESS_KEY_ID
-    echo $AWS_SECRET_ACCESS_KEY
-    if [ $ENV == 'prod' ]; then
-        export BOTO_CONFIG=/var/lib/jenkins/.boto_config/boto_cogads_prod.cfg
-    else
-    	export BOTO_CONFIG=/var/lib/jenkins/.boto_config/boto_cogads_nonprod.cfg
-    fi
+    export aws_secret_access_id=${AWS_ACCESS_KEY_ID}
+    export aws_secret_access_key=${AWS_SECRET_ACCESS_KEY}
     export AWS_PROFILE_NAME=
     #export AWS_ACCESS_KEY_ID="$aws_access_key_id"
     #export AWS_SECRET_ACCESS_KEY="$aws_secret_access_key"
