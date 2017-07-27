@@ -72,6 +72,7 @@ if [[ $OSTYPE != darwin* ]]; then
     echo "Info: I'm running from an EC2 Instance, I'll get my credentials from my meta-data url."
     echo ${AWS_ACCESS_KEY_ID}
     echo ${AWS_SECRET_ACCESS_KEY}
+    unset AWS_PROFILE_NAME
     #export AWS_ACCESS_KEY_ID="$aws_access_key_id"
     #export AWS_SECRET_ACCESS_KEY="$aws_secret_access_key"
     #export AWS_SESSION_TOKEN="$token"
