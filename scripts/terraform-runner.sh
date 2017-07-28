@@ -124,13 +124,12 @@ if [ "$local" == "true" ]; then
     aws_secret_access_key=`cat ~/.aws/credentials | grep "$AWS_PROFILE_NAME" -A 5 | grep aws_secret_access_key | awk '{print $3}'`
     token=`cat ~/.aws/credentials | grep "$AWS_PROFILE_NAME" -A 5 | grep aws_session_token | awk '{print $3}'`
 fi
-echo ${AWS_ACCESS_KEY_ID}
-echo ${AWS_SECRET_ACCESS_KEY}
-#secrets_filename=${TF_VAR_PROJECT}-secrets-${ENV}.properties
-#aws s3 cp s3://${TF_VAR_OWNER_NAME}-${ENV}-tfconfig/${secrets_filename} ./${secrets_filename}
-#source ./${secrets_filename}
-#echo "Sourcing secrets: ${secrets_filename}"
-#rm ./${secrets_filename}
+
+secrets_filename=${TF_VAR_PROJECT}-secrets-${ENV}.properties
+aws s3 cp s3://${TF_VAR_OWNER_NAME}-${ENV}-tfconfig/${secrets_filename} ./${secrets_filename}
+source ./${secrets_filename}
+echo "Sourcing secrets: ${secrets_filename}"
+rm ./${secrets_filename}
 #echo ">>>>> ${TF_VAR_REPOSITORY_AUTH_DATA_URL}"
 
 echo "Step 3: Run terraform with options"
