@@ -123,11 +123,10 @@ if [ "$local" == "true" ]; then
     aws_access_key_id=`cat ~/.aws/credentials | grep "$AWS_PROFILE_NAME" -A 5 | grep aws_access_key | awk '{print $3}'`
     aws_secret_access_key=`cat ~/.aws/credentials | grep "$AWS_PROFILE_NAME" -A 5 | grep aws_secret_access_key | awk '{print $3}'`
     token=`cat ~/.aws/credentials | grep "$AWS_PROFILE_NAME" -A 5 | grep aws_session_token | awk '{print $3}'`
+else
+  unset AWS_DEFAULT_PROFILE
+  unset AWS_PROFILE
 fi
-
-echo "AWS_DEFAULT_PROFILE: $AWS_DEFAULT_PROFILE"
-unset AWS_DEFAULT_PROFILE
-unset AWS_PROFILE
 
 secrets_filename=${TF_VAR_PROJECT}-secrets-${ENV}.properties
 aws s3 cp s3://${TF_VAR_OWNER_NAME}-${ENV}-tfconfig/${secrets_filename} ./${secrets_filename}
