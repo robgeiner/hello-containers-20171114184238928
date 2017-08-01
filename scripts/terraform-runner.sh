@@ -125,6 +125,9 @@ if [ "$local" == "true" ]; then
     token=`cat ~/.aws/credentials | grep "$AWS_PROFILE_NAME" -A 5 | grep aws_session_token | awk '{print $3}'`
 fi
 
+echo "AWS_DEFAULT_PROFILE: $AWS_DEFAULT_PROFILE"
+unset AWS_DEFAULT_PROFILE
+
 secrets_filename=${TF_VAR_PROJECT}-secrets-${ENV}.properties
 aws s3 cp s3://${TF_VAR_OWNER_NAME}-${ENV}-tfconfig/${secrets_filename} ./${secrets_filename}
 source ./${secrets_filename}
@@ -142,9 +145,6 @@ TERRAFORM_DIR="$PWD/../terraform${DIR}"
 TERRAFORM_REMOTE_STATE_DIR="$PWD/../terraform/$ENV/_global/_remote_state"
 
 date_file=`date +%m%d%y%H%M%S`
-
-echo "AWS_DEFAULT_PROFILE: $AWS_DEFAULT_PROFILE"
-unset AWS_DEFAULT_PROFILE
 
 case "$VERB" in
     get|apply|destroy)
