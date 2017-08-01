@@ -70,9 +70,6 @@ echo "Step 1: Get Credentials:"
 
 if [[ $OSTYPE != darwin* ]]; then
     echo "Info: I'm running from an EC2 Instance, I'll get my credentials from my meta-data url."
-    echo ${AWS_ACCESS_KEY_ID}
-    echo ${AWS_SECRET_ACCESS_KEY}
-    unset AWS_PROFILE_NAME
     #export AWS_ACCESS_KEY_ID="$aws_access_key_id"
     #export AWS_SECRET_ACCESS_KEY="$aws_secret_access_key"
     #export AWS_SESSION_TOKEN="$token"
@@ -123,9 +120,10 @@ if [ "$local" == "true" ]; then
     aws_access_key_id=`cat ~/.aws/credentials | grep "$AWS_PROFILE_NAME" -A 5 | grep aws_access_key | awk '{print $3}'`
     aws_secret_access_key=`cat ~/.aws/credentials | grep "$AWS_PROFILE_NAME" -A 5 | grep aws_secret_access_key | awk '{print $3}'`
     token=`cat ~/.aws/credentials | grep "$AWS_PROFILE_NAME" -A 5 | grep aws_session_token | awk '{print $3}'`
-else
-  unset AWS_DEFAULT_PROFILE
-  unset AWS_PROFILE
+#else
+#  unset AWS_DEFAULT_PROFILE
+#  unset AWS_PROFILE
+#  unset AWS_PROFILE_NAME
 fi
 
 secrets_filename=${TF_VAR_PROJECT}-secrets-${ENV}.properties
