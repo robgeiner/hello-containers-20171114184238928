@@ -143,6 +143,9 @@ TERRAFORM_REMOTE_STATE_DIR="$PWD/../terraform/$ENV/_global/_remote_state"
 
 date_file=`date +%m%d%y%H%M%S`
 
+echo "AWS_DEFAULT_PROFILE: $AWS_DEFAULT_PROFILE"
+unset AWS_DEFAULT_PROFILE
+
 case "$VERB" in
     get|apply|destroy)
         echo "Info: running terraform $VERB on $DIR in environment $ENV and region ${REGION}."
