@@ -74,9 +74,6 @@ resource "aws_ecs_service" "service" {
     placement_constraints {
       type = "distinctInstance"
     }
-    lifecycle {
-      ignore_changes = ["desired_count"]
-    }
 }
 
 ######## AutoScaling #######
