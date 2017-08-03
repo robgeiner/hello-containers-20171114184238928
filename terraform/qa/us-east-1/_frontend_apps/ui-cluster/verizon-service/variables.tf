@@ -8,6 +8,10 @@ variable "desired_count" {
   default = "2"
 }
 
+variable "deployment_minimum_healthy_percent" {
+  default = "25"
+}
+
 variable "asg_min" {
   default = "2"
 }
