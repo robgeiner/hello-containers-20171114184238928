@@ -117,9 +117,17 @@ resource "aws_alb_listener" "public-listener" {
    }
 }
 
-resource "aws_route53_record" "cogads-ui-shortname" {
+resource "aws_route53_record" "cogads-ui" {
   zone_id = "${data.terraform_remote_state.route53.zone_id}"
   name = "ui-${var.ENVIRONMENT}-${var.REGION}"
+  type = "CNAME"
+  ttl = "60"
+  records = ["${module.alb-public.dns_name}"]
+}
+
+resource "aws_route53_record" "cogads-convo-api" {
+  zone_id = "${data.terraform_remote_state.route53.zone_id}"
+  name = "${data.terraform_remote_state.service-registry.convo_api_name}-${var.ENVIRONMENT}-${var.REGION}"
   type = "CNAME"
   ttl = "60"
   records = ["${module.alb-public.dns_name}"]

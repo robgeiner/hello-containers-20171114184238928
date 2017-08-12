@@ -7,16 +7,29 @@ module "target_group" {
   healthcheck_protocol = "${data.terraform_remote_state.service-registry.convo_api_healthcheck_protocol}"
 }
 
-resource "aws_alb_listener_rule" "convo_api" {
+resource "aws_alb_listener_rule" "https-global-rule" {
   listener_arn = "${data.terraform_remote_state.cluster.listener_public_arn}"
-  priority     = "${data.terraform_remote_state.service-registry.convo_api_priority}"
+  priority = "${data.terraform_remote_state.service-registry.convo_api_global_priority}"
   action {
-    type             = "forward"
+    type = "forward"
     target_group_arn = "${module.target_group.arn}"
   }
   condition {
-    field  = "path-pattern"
-    values = ["${data.terraform_remote_state.service-registry.convo_api_path}${data.terraform_remote_state.service-registry.convo_api_api_key}*"]
+    field = "host-header"
+    values = ["${data.terraform_remote_state.service-registry.convo_api_global_hostname}"]
+  }
+}
+
+resource "aws_alb_listener_rule" "https-region-rule" {
+  listener_arn = "${data.terraform_remote_state.cluster.listener_public_arn}"
+  priority = "${data.terraform_remote_state.service-registry.convo_api_region_priority}"
+  action {
+    type = "forward"
+    target_group_arn = "${module.target_group.arn}"
+  }
+  condition {
+    field = "host-header"
+    values = ["${data.terraform_remote_state.service-registry.convo_api_region_hostname}"]
   }
 }
 
