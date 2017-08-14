@@ -18,3 +18,15 @@ output "verizon_api_key" { value = "${var.verizon_api_key}" }
 output "verizon_path" { value = "${var.verizon_path}" }
 output "verizon_healthcheck_protocol" { value = "${var.verizon_healthcheck_protocol}" }
 output "verizon_healthcheck_path" { value = "${var.verizon_healthcheck_path}" }
+
+output "convo_api_name" { value = "${var.convo_api_name}" }
+output "convo_api_port" { value = "${var.convo_api_port}" }
+output "convo_api_protocol" { value = "${var.convo_api_protocol}" }
+output "convo_api_global_priority" { value = "${var.convo_api_global_priority}" }
+output "convo_api_region_priority" { value = "${var.convo_api_region_priority}" }
+output "convo_api_api_key" { value = "${var.convo_api_api_key}" }
+output "convo_api_path" { value = "${var.convo_api_path}" }
+output "convo_api_healthcheck_protocol" { value = "${var.convo_api_healthcheck_protocol}" }
+output "convo_api_healthcheck_path" { value = "${var.convo_api_healthcheck_path}" }
+output "convo_api_region_hostname" { value = "${var.convo_api_name}-${var.ENVIRONMENT}-${var.REGION}.${data.terraform_remote_state.route53.domain}" }
+output "convo_api_global_hostname" { value = "${var.convo_api_name}.${data.terraform_remote_state.route53.domain}" }

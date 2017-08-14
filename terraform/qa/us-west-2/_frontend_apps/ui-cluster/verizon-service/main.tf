@@ -61,6 +61,7 @@ resource "aws_ecs_service" "service" {
     iam_role = "${data.terraform_remote_state.iam.ecsServiceRole_arn}"
     desired_count = "${var.desired_count}"
     deployment_minimum_healthy_percent = "${var.deployment_minimum_healthy_percent}"
+    deployment_maximum_percent = "${var.deployment_maximum_percent}"
 
     load_balancer {
         target_group_arn = "${module.target_group.arn}"
