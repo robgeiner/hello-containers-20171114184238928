@@ -95,9 +95,9 @@ resource "aws_ecs_service" "service" {
       type  = "spread"
       field = "attribute:ecs.availability-zone"
     }
-  #  placement_constraints {
-  #    type = "distinctInstance"
-  #  }
+    placement_constraints {
+      type = "distinctInstance"
+    }
     lifecycle {
       ignore_changes = ["desired_count"]
     }
