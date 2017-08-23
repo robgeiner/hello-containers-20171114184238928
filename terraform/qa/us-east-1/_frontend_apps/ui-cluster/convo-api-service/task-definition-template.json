@@ -42,7 +42,7 @@
           { "name" : "PERSONALITY_INSIGHTS_PASSWORD", "value" : "${personality_insights_password}" },
           { "name" : "RETRIEVE_AND_RANK_USERNAME", "value" : "${rank_and_retrieve_username}" },
           { "name" : "RETRIEVE_AND_RANK_PASSWORD", "value" : "${rank_and_retrieve_password}" },
-          { "name" : "DOWNLOAD_S3_FILES", "value" : "${download_s3_files}" }    
+          { "name" : "DOWNLOAD_S3_FILES", "value" : "${download_s3_files}" }
       ],
       "mountPoints": [
         {
