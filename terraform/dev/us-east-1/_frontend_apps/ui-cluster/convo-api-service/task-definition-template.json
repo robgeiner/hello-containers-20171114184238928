@@ -43,6 +43,7 @@
           { "name" : "RNR_URL", "value" : "${rank_and_retrieve_url}" },
           { "name" : "RNR_USER", "value" : "${rank_and_retrieve_username}" },
           { "name" : "RNR_PW", "value" : "${rank_and_retrieve_password}" },
+          { "name" : "WEATHER_API_KEY", "value" : "${weather_api_key}" },
           { "name" : "DOWNLOAD_S3_FILES", "value" : "${download_s3_files}" }
       ],
       "volumesFrom": [

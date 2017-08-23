@@ -64,10 +64,13 @@ data "template_file" "task_template" {
         config_path = "${var.config_path}"
         convo_api_username = "${var.CONVERSATION_USER}"
         convo_api_password = "${var.CONVERSATION_PW}"
+        personality_insights_url = "${var.personality_insights_url}"
         personality_insights_username = "${var.PERSONALITY_INSIGHTS_USER}"
         personality_insights_password = "${var.PERSONALITY_INSIGHTS_PW}"
+        rank_and_retrieve_url = "${var.rank_and_retrieve_url}"
         rank_and_retrieve_username = "${var.RNR_USER}"
         rank_and_retrieve_password = "${var.RNR_PW}"
+        weather_api_key = "${var.WEATHER_API_KEY}"
         download_s3_files = "${var.download_s3_files}"
     }
 }
