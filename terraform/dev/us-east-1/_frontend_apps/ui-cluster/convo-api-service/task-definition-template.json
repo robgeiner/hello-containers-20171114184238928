@@ -37,8 +37,10 @@
           { "name" : "COGADS_CONFIG_PATH", "value" : "${config_path}" },
           { "name" : "CONVERSATION_USER", "value" : "${convo_api_username}" },
           { "name" : "CONVERSATION_PW", "value" : "${convo_api_password}" },
+          { "name" : "PERSONALITY_INSIGHTS_URL", "value" : "${personality_insights_url}" },
           { "name" : "PERSONALITY_INSIGHTS_USER", "value" : "${personality_insights_username}" },
           { "name" : "PERSONALITY_INSIGHTS_PW", "value" : "${personality_insights_password}" },
+          { "name" : "RNR_URL", "value" : "${rank_and_retrieve_url}" },
           { "name" : "RNR_USER", "value" : "${rank_and_retrieve_username}" },
           { "name" : "RNR_PW", "value" : "${rank_and_retrieve_password}" },
           { "name" : "DOWNLOAD_S3_FILES", "value" : "${download_s3_files}" }

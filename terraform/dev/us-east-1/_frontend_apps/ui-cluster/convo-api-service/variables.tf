@@ -65,13 +65,13 @@ variable "BAR_STREAM_ACCESS_SECRET" {}
 variable "CONVERSATION_USER" {}
 variable "CONVERSATION_PW" {}
 
-variable "PERSONALITY_INSIGHTS_URL" {
+variable "personality_insights_url" {
   default = "https://gateway.watsonplatform.net/personality-insights/api"
 }
 variable "PERSONALITY_INSIGHTS_USER" {}
 variable "PERSONALITY_INSIGHTS_PW" {}
 
-variable "RNR_URL" {
+variable "rank_and_retrieve_url" {
   default = "https://gateway.watsonplatform.net/retrieve-and-rank/api"
 }
 variable "RNR_USER" {}
