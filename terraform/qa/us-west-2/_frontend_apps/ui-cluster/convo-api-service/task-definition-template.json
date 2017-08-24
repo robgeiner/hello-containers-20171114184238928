@@ -35,6 +35,7 @@
           { "name" : "STREAM_ACCESS_KEY", "value" : "${stream_access_key}" },
           { "name" : "STREAM_ACCESS_SECRET", "value" : "${stream_access_secret}" },
           { "name" : "COGADS_CONFIG_PATH", "value" : "${config_path}" },
+          { "name" : "CONVERSATION_WS_ID", "value" : "3d87037f-2d94-4c1c-95f0-3e88292a96d4" },
           { "name" : "CONVERSATION_USER", "value" : "${convo_api_username}" },
           { "name" : "CONVERSATION_PW", "value" : "${convo_api_password}" },
           { "name" : "PERSONALITY_INSIGHTS_URL", "value" : "${personality_insights_url}" },
