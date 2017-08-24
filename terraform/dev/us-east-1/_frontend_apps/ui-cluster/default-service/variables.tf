@@ -35,3 +35,5 @@ variable "profiler" {
 variable "background" {
   default = "false"
 }
+
+variable "NEW_RELIC_LICENSE_KEY" {}

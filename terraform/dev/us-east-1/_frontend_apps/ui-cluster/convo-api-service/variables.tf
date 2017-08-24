@@ -78,3 +78,5 @@ variable "RNR_USER" {}
 variable "RNR_PW" {}
 
 variable "WEATHER_API_KEY" {}
+
+variable "NEW_RELIC_LICENSE_KEY" {}
