@@ -45,6 +45,8 @@ variable "debug_options" {
   #default = "connect:redis,express-session"
 }
 
+variable "NEW_RELIC_LICENSE_KEY" {}
+
 variable "TWITTER_CONSUMER_KEY" {}
 
 variable "TWITTER_CONSUMER_SECRET" {}

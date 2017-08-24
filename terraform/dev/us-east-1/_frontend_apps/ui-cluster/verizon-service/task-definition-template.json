@@ -28,6 +28,8 @@
           { "name" : "REDIS_PORT", "value" : "${redis_port}" },
           { "name" : "REDIS_HOST", "value" : "${redis_host}" },
           { "name" : "API_KEY", "value" : "${api_key}" },
+          { "name" : "NEW_RELIC_APP_NAME", "value" : "${newrelic_app_name}" },
+          { "name" : "NEW_RELIC_LICENSE_KEY", "value" : "${newrelic_license_key}" },
           { "name" : "TWITTER_CONSUMER_KEY", "value" : "${twitter_consumer_key}" },
           { "name" : "TWITTER_CONSUMER_SECRET", "value" : "${twitter_consumer_secret}" },
           { "name" : "TWITTER_CALLBACK_URL", "value" : "${twitter_callback_url}" }
