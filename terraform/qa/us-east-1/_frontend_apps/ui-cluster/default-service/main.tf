@@ -12,6 +12,8 @@ data "template_file" "task_template" {
         port = "${var.port}"
         project = "${var.PROJECT}"
         profiler = "${var.profiler}"
+        newrelic_app_name = "${data.terraform_remote_state.service-registry.default_name}-${var.ENVIRONMENT}"
+        newrelic_license_key = "${var.NEW_RELIC_LICENSE_KEY}"
     }
 }
 
@@ -36,7 +38,7 @@ resource "aws_ecs_service" "service" {
     desired_count = "${var.desired_count}"
     deployment_minimum_healthy_percent = "${var.deployment_minimum_healthy_percent}"
     deployment_maximum_percent = "${var.deployment_maximum_percent}"
-    
+
     load_balancer {
         target_group_arn = "${data.terraform_remote_state.cluster.tg_default_arn}"
         container_name = "${data.terraform_remote_state.service-registry.default_name}"

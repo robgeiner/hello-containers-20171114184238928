@@ -77,6 +77,8 @@ data "template_file" "task_template" {
         config_path = "${var.config_path}"
         convo_api_username = "${var.CONVERSATION_USER}"
         convo_api_password = "${var.CONVERSATION_PW}"
+        newrelic_app_name = "${data.terraform_remote_state.service-registry.convo_api_name}-${var.ENVIRONMENT}"
+        newrelic_license_key = "${var.NEW_RELIC_LICENSE_KEY}"
         personality_insights_url = "${var.personality_insights_url}"
         personality_insights_username = "${var.PERSONALITY_INSIGHTS_USER}"
         personality_insights_password = "${var.PERSONALITY_INSIGHTS_PW}"

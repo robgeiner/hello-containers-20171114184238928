@@ -12,6 +12,8 @@ data "template_file" "task_template" {
         port = "${var.port}"
         project = "${var.PROJECT}"
         profiler = "${var.profiler}"
+        newrelic_app_name = "${data.terraform_remote_state.service-registry.default_name}-${var.ENVIRONMENT}"
+        newrelic_license_key = "${var.NEW_RELIC_LICENSE_KEY}"
     }
 }
 

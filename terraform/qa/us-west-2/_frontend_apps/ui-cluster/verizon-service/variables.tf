@@ -53,6 +53,8 @@ variable "background" {
   default = "false"
 }
 
+variable "NEW_RELIC_LICENSE_KEY" {}
+
 variable "TWITTER_CONSUMER_KEY" {}
 
 variable "TWITTER_CONSUMER_SECRET" {}

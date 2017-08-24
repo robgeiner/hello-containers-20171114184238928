@@ -21,7 +21,9 @@
           { "name" : "LOGGER_LEVEL", "value" : "${log_level}" },
           { "name" : "PORT", "value" : "${port}" },
           { "name" : "PROFILER", "value" : "${profiler}" },
-          { "name" : "ENV", "value" : "${environment}" }
+          { "name" : "ENV", "value" : "${environment}" },
+          { "name" : "NEW_RELIC_APP_NAME", "value" : "${newrelic_app_name}" },
+          { "name" : "NEW_RELIC_LICENSE_KEY", "value" : "${newrelic_license_key}" }
       ],
       "mountPoints": [
         {
