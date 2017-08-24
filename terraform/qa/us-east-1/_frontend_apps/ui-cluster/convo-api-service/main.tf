@@ -36,9 +36,12 @@ resource "aws_alb_listener_rule" "https-region-rule" {
 data "template_file" "task_template" {
     template = "${file("./task-definition-template.json")}"
     vars {
-        app_repository_url = "${data.terraform_remote_state.repository.repository_url}"
+        app_repository_url = "${data.terraform_remote_state.app-repository.repository_url}"
         app_name = "${data.terraform_remote_state.service-registry.convo_api_name}"
-        app_version = "${var.version}"
+        app_version = "${var.app_version}"
+        config_repository_url = "${data.terraform_remote_state.config-repository.repository_url}"
+        config_name = "${data.terraform_remote_state.service-registry.convo_api_name}-config"
+        config_version = "${var.config_version}"
         cpu = "${var.cpu}"
         background = "${var.background}"
         environment = "${var.ENVIRONMENT}"
@@ -58,14 +61,16 @@ data "template_file" "task_template" {
         bar_write_user = "${var.BAR_WRITE_USER}"
         stream_access_key = "${var.BAR_STREAM_ACCESS_KEY}"
         stream_access_secret = "${var.BAR_STREAM_ACCESS_SECRET}"
-        convo_api_username = "${var.CONVO_API_USERNAME}"
-        convo_api_password = "${var.CONVO_API_PASSWORD}"
-        speech_to_text_username = "${var.SPEECH_TO_TEXT_USERNAME}"
-        speech_to_text_password = "${var.SPEECH_TO_TEXT_PASSWORD}"
-        personality_insights_username = "${var.PERSONALITY_INSIGHTS_USERNAME}"
-        personality_insights_password = "${var.PERSONALITY_INSIGHTS_PASSWORD}"
-        rank_and_retrieve_username = "${var.RETRIEVE_AND_RANK_USERNAME}"
-        rank_and_retrieve_password = "${var.RETRIEVE_AND_RANK_PASSWORD}"
+        config_path = "${var.config_path}"
+        convo_api_username = "${var.CONVERSATION_USER}"
+        convo_api_password = "${var.CONVERSATION_PW}"
+        personality_insights_url = "${var.personality_insights_url}"
+        personality_insights_username = "${var.PERSONALITY_INSIGHTS_USER}"
+        personality_insights_password = "${var.PERSONALITY_INSIGHTS_PW}"
+        rank_and_retrieve_url = "${var.rank_and_retrieve_url}"
+        rank_and_retrieve_username = "${var.RNR_USER}"
+        rank_and_retrieve_password = "${var.RNR_PW}"
+        weather_api_key = "${var.WEATHER_API_KEY}"
         download_s3_files = "${var.download_s3_files}"
     }
 }
@@ -100,9 +105,9 @@ resource "aws_ecs_service" "service" {
     placement_constraints {
       type = "distinctInstance"
     }
-    #lifecycle {
-    #  ignore_changes = ["desired_count"]
-    #}
+  #  lifecycle {
+  #    ignore_changes = ["desired_count"]
+  #  }
 }
 
 ######## AutoScaling #######

@@ -1,4 +1,6 @@
-variable "version" { default = "e6d74862fafdb6833d031569be15d26f3af17775" }
+variable "app_version" { default = "bdb76566fdaeee988982d72a991362acf6392246" }
+
+variable "config_version" { default = "8526d95fb89107bd8f68b7f595f9677cd3e547d9" }
 
 variable "log_level" {
   default = "info"
@@ -53,6 +55,10 @@ variable "download_s3_files" {
   default = "true"
 }
 
+variable "config_path" {
+  default = "/config/instance_configurations"
+}
+
 variable "BAR_QUEUE_ARN" {}
 variable "BAR_QUEUE_NAME" {}
 variable "BAR_READ_ACCESS_KEY" {}
@@ -63,11 +69,20 @@ variable "BAR_WRITE_SECRET_KEY" {}
 variable "BAR_WRITE_USER" {}
 variable "BAR_STREAM_ACCESS_KEY" {}
 variable "BAR_STREAM_ACCESS_SECRET" {}
-variable "CONVO_API_USERNAME" {}
-variable "CONVO_API_PASSWORD" {}
-variable "SPEECH_TO_TEXT_USERNAME" {}
-variable "SPEECH_TO_TEXT_PASSWORD" {}
-variable "PERSONALITY_INSIGHTS_USERNAME" {}
-variable "PERSONALITY_INSIGHTS_PASSWORD" {}
-variable "RETRIEVE_AND_RANK_USERNAME" {}
-variable "RETRIEVE_AND_RANK_PASSWORD" {}
+
+variable "CONVERSATION_USER" {}
+variable "CONVERSATION_PW" {}
+
+variable "personality_insights_url" {
+  default = "https://gateway.watsonplatform.net/personality-insights/api"
+}
+variable "PERSONALITY_INSIGHTS_USER" {}
+variable "PERSONALITY_INSIGHTS_PW" {}
+
+variable "rank_and_retrieve_url" {
+  default = "https://gateway.watsonplatform.net/retrieve-and-rank/api"
+}
+variable "RNR_USER" {}
+variable "RNR_PW" {}
+
+variable "WEATHER_API_KEY" {}

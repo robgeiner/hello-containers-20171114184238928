@@ -43,11 +43,20 @@ data "terraform_remote_state" "service-registry" {
   }
 }
 
-data "terraform_remote_state" "repository" {
+data "terraform_remote_state" "app-repository" {
   backend = "s3"
   config {
     bucket = "${var.REMOTE_STATE_BUCKET_NAME}"
-    key     = "${var.ENVIRONMENT}/${var.REGION}/_frontend_apps/ui-cluster/repository/convo-api/terraform.tfstate"
+    key     = "${var.ENVIRONMENT}/${var.REGION}/_frontend_apps/ui-cluster/repository/convo-api/app/terraform.tfstate"
+    region  = "${var.REMOTE_STATE_BUCKET_REGION}"
+  }
+}
+
+data "terraform_remote_state" "config-repository" {
+  backend = "s3"
+  config {
+    bucket = "${var.REMOTE_STATE_BUCKET_NAME}"
+    key     = "${var.ENVIRONMENT}/${var.REGION}/_frontend_apps/ui-cluster/repository/convo-api/config/terraform.tfstate"
     region  = "${var.REMOTE_STATE_BUCKET_REGION}"
   }
 }

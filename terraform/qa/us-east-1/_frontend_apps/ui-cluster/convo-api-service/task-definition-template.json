@@ -34,15 +34,22 @@
           { "name" : "BAR_WRITE_USER", "value" : "${bar_write_user}" },
           { "name" : "STREAM_ACCESS_KEY", "value" : "${stream_access_key}" },
           { "name" : "STREAM_ACCESS_SECRET", "value" : "${stream_access_secret}" },
-          { "name" : "CONVO_API_USERNAME", "value" : "${convo_api_username}" },
-          { "name" : "CONVO_API_PASSWORD", "value" : "${convo_api_password}" },
-          { "name" : "SPEECH_TO_TEXT_USERNAME", "value" : "${speech_to_text_username}" },
-          { "name" : "SPEECH_TO_TEXT_PASSWORD", "value" : "${speech_to_text_password}" },
-          { "name" : "PERSONALITY_INSIGHTS_USERNAME", "value" : "${personality_insights_username}" },
-          { "name" : "PERSONALITY_INSIGHTS_PASSWORD", "value" : "${personality_insights_password}" },
-          { "name" : "RETRIEVE_AND_RANK_USERNAME", "value" : "${rank_and_retrieve_username}" },
-          { "name" : "RETRIEVE_AND_RANK_PASSWORD", "value" : "${rank_and_retrieve_password}" },
+          { "name" : "COGADS_CONFIG_PATH", "value" : "${config_path}" },
+          { "name" : "CONVERSATION_USER", "value" : "${convo_api_username}" },
+          { "name" : "CONVERSATION_PW", "value" : "${convo_api_password}" },
+          { "name" : "PERSONALITY_INSIGHTS_URL", "value" : "${personality_insights_url}" },
+          { "name" : "PERSONALITY_INSIGHTS_USER", "value" : "${personality_insights_username}" },
+          { "name" : "PERSONALITY_INSIGHTS_PW", "value" : "${personality_insights_password}" },
+          { "name" : "RNR_URL", "value" : "${rank_and_retrieve_url}" },
+          { "name" : "RNR_USER", "value" : "${rank_and_retrieve_username}" },
+          { "name" : "RNR_PW", "value" : "${rank_and_retrieve_password}" },
+          { "name" : "WEATHER_API_KEY", "value" : "${weather_api_key}" },
           { "name" : "DOWNLOAD_S3_FILES", "value" : "${download_s3_files}" }
+      ],
+      "volumesFrom": [
+        {
+          "sourceContainer": "${config_name}"
+        }
       ],
       "mountPoints": [
         {
@@ -51,5 +58,11 @@
           "readOnly": false
         }
       ]
+  },
+  {
+      "image": "${config_repository_url}:${config_version}",
+      "name": "${config_name}",
+      "memory": 4,
+      "essential": true
   }
 ]
