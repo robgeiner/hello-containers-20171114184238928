@@ -37,6 +37,7 @@
           { "name" : "COGADS_CONFIG_PATH", "value" : "${config_path}" },
           { "name" : "CONVERSATION_USER", "value" : "${convo_api_username}" },
           { "name" : "CONVERSATION_PW", "value" : "${convo_api_password}" },
+          { "name" : "NEW_RELIC_NO_CONFIG_FILE", "value" : "true" },
           { "name" : "NEW_RELIC_APP_NAME", "value" : "${newrelic_app_name}" },
           { "name" : "NEW_RELIC_LICENSE_KEY", "value" : "${newrelic_license_key}" },
           { "name" : "PERSONALITY_INSIGHTS_URL", "value" : "${personality_insights_url}" },
