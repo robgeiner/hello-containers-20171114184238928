@@ -5,7 +5,7 @@ variable "log_level" {
 }
 
 variable "desired_count" {
-  default = "1"
+  default = "2"
 }
 
 variable "deployment_minimum_healthy_percent" {
@@ -17,7 +17,7 @@ variable "deployment_maximum_percent" {
 }
 
 variable "asg_min" {
-  default = "1"
+  default = "2"
 }
 
 variable "asg_max" {
