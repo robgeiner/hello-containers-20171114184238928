@@ -52,7 +52,7 @@ variable "debug_options" {
 }
 
 variable "download_s3_files" {
-  default = "true"
+  default = "false"
 }
 
 variable "config_path" {
