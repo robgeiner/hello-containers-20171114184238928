@@ -139,7 +139,7 @@ data "template_file" "es-proxy_lc_ud" {
       "endpoint": {
         "hostname": "${data.terraform_remote_state.logging.endpoint}",
         "region": "${data.terraform_remote_state.logging.region}"
-        }
+      }
     }
     EOF
   }

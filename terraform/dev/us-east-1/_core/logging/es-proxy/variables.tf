@@ -18,6 +18,6 @@ variable "instance_type" {
   default = "t2.medium"
 }
 
-variable "additional_ips" {
-   default = "71.0.127.137/32"  # rob geiner home
-}  # dev/devops home static ips
+#variable "additional_ips" {
+#   default = "71.0.127.137/32"  # rob geiner home
+#}  # dev/devops home static ips
