@@ -19,6 +19,15 @@ output "verizon_path" { value = "${var.verizon_path}" }
 output "verizon_healthcheck_protocol" { value = "${var.verizon_healthcheck_protocol}" }
 output "verizon_healthcheck_path" { value = "${var.verizon_healthcheck_path}" }
 
+output "hulu_name" { value = "${var.hulu_name}" }
+output "hulu_port" { value = "${var.hulu_port}" }
+output "hulu_protocol" { value = "${var.hulu_protocol}" }
+output "hulu_priority" { value = "${var.hulu_priority}" }
+output "hulu_api_key" { value = "${var.hulu_api_key}" }
+output "hulu_path" { value = "${var.hulu_path}" }
+output "hulu_healthcheck_protocol" { value = "${var.hulu_healthcheck_protocol}" }
+output "hulu_healthcheck_path" { value = "${var.hulu_healthcheck_path}" }
+
 output "convo_api_name" { value = "${var.convo_api_name}" }
 output "convo_api_port" { value = "${var.convo_api_port}" }
 output "convo_api_protocol" { value = "${var.convo_api_protocol}" }

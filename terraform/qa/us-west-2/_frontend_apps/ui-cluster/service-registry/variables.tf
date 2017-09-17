@@ -16,6 +16,15 @@ variable "verizon_path" { default = "/wa/" }
 variable "verizon_healthcheck_protocol" { default = "HTTP" }
 variable "verizon_healthcheck_path" { default = "/wa/health" }
 
+variable "hulu_name" { default = "hulu" }
+variable "hulu_port" { default = "3002" }
+variable "hulu_protocol" { default = "HTTP" }
+variable "hulu_priority" { default = "210" }
+variable "hulu_api_key" { default = "20c56a22-45d3-45d1-b133-306845bb9b1b"  }
+variable "hulu_path" { default = "/wa/" }
+variable "hulu_healthcheck_protocol" { default = "HTTP" }
+variable "hulu_healthcheck_path" { default = "/wa/health" }
+
 variable "convo_api_name" { default = "convo-api" }
 variable "convo_api_port" { default = "8080" }
 variable "convo_api_protocol" { default = "HTTP" }
