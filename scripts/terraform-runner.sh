@@ -128,6 +128,10 @@ fi
 
 secrets_filename=${TF_VAR_PROJECT}-secrets-${ENV}.properties
 aws s3 cp s3://${TF_VAR_OWNER_NAME}-${ENV}-tfconfig/${secrets_filename} ./${secrets_filename}
+if [ $? -ne 0 ]; then
+  echo "Downloading secrets failed $?"
+  exit 1
+fi
 source ./${secrets_filename}
 echo "Sourcing secrets: ${secrets_filename}"
 rm ./${secrets_filename}
