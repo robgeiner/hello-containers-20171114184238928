@@ -7,16 +7,16 @@ variable "port" {
 }
 
 variable "instance_type" {
-  #default = "cache.m4.large"
-  default = "cache.t2.small"
+  default = "cache.m4.large"
+  #default = "cache.t2.small"
 }
 
 variable "automatic_failover" {
-  default = "false"
+  default = "true"
 }
 
 variable "cluster_count" {
-  default = "1"
+  default = "2"
 }
 
 variable "engine_version" {

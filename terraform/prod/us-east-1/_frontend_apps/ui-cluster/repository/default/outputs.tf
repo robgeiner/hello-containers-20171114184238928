@@ -3,5 +3,5 @@ output "name" {
 }
 
 output "repository_url" {
-  value = "twc-cognitive-docker.jfrog.io/${var.namespace}/${var.name}"
+  value = "twc-cognitive-${var.ENVIRONMENT}-docker.jfrog.io/${var.namespace}/${var.name}"
 }
