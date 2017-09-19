@@ -26,19 +26,21 @@ data "template_file" "task_template" {
         app_repository_url = "${data.terraform_remote_state.repository.repository_url}"
         app_name = "${data.terraform_remote_state.service-registry.verizon_name}"
         app_version = "${var.version}"
-        cpu = "${var.cpu}"
+        api_key = "${data.terraform_remote_state.service-registry.verizon_api_key}"
         background = "${var.background}"
+        cpu = "${var.cpu}"
+        debug_options = "${var.debug_options}"
         environment = "${var.ENVIRONMENT}"
         log_level = "${var.log_level}"
-        debug_options = "${var.debug_options}"
         memory = "${var.memory}"
         port = "${var.port}"
         project = "${var.PROJECT}"
         profiler = "${var.profiler}"
-        storage = "${var.storage}"
+        newrelic_app_name = "${data.terraform_remote_state.service-registry.verizon_name}-${var.ENVIRONMENT}"
+        newrelic_license_key = "${var.NEW_RELIC_LICENSE_KEY}"
         redis_host = "${data.terraform_remote_state.ec-redis.endpoint}"
         redis_port = "${data.terraform_remote_state.ec-redis.port}"
-        api_key = "${data.terraform_remote_state.service-registry.verizon_api_key}"
+        storage = "${var.storage}"
         twitter_consumer_key =  "${var.TWITTER_CONSUMER_KEY}"
         twitter_consumer_secret = "${var.TWITTER_CONSUMER_SECRET}"
         twitter_callback_url = "https://ui.${data.terraform_remote_state.route53.domain}${data.terraform_remote_state.service-registry.verizon_path}${data.terraform_remote_state.service-registry.verizon_api_key}/auth/twitter/callback"
@@ -60,6 +62,8 @@ resource "aws_ecs_service" "service" {
     task_definition = "${aws_ecs_task_definition.task_definition.arn}"
     iam_role = "${data.terraform_remote_state.iam.ecsServiceRole_arn}"
     desired_count = "${var.desired_count}"
+    deployment_minimum_healthy_percent = "${var.deployment_minimum_healthy_percent}"
+    deployment_maximum_percent = "${var.deployment_maximum_percent}"
 
     load_balancer {
         target_group_arn = "${module.target_group.arn}"
@@ -70,11 +74,8 @@ resource "aws_ecs_service" "service" {
       type  = "spread"
       field = "attribute:ecs.availability-zone"
     }
-  #  placement_constraints {
-  #    type = "distinctInstance"
-  #  }
-    lifecycle {
-      ignore_changes = ["desired_count"]
+    placement_constraints {
+      type = "distinctInstance"
     }
 }
 

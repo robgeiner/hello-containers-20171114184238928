@@ -8,6 +8,14 @@ variable "desired_count" {
   default = "2"
 }
 
+variable "deployment_minimum_healthy_percent" {
+  default = "50"
+}
+
+variable "deployment_maximum_percent" {
+  default = "200"
+}
+
 variable "asg_min" {
   default = "2"
 }
@@ -44,6 +52,8 @@ variable "debug_options" {
   default = ""
   #default = "connect:redis,express-session"
 }
+
+variable "NEW_RELIC_LICENSE_KEY" {}
 
 variable "TWITTER_CONSUMER_KEY" {}
 
