@@ -120,10 +120,10 @@ if [ "$local" == "true" ]; then
     aws_access_key_id=`cat ~/.aws/credentials | grep "$AWS_PROFILE_NAME" -A 5 | grep aws_access_key | awk '{print $3}'`
     aws_secret_access_key=`cat ~/.aws/credentials | grep "$AWS_PROFILE_NAME" -A 5 | grep aws_secret_access_key | awk '{print $3}'`
     token=`cat ~/.aws/credentials | grep "$AWS_PROFILE_NAME" -A 5 | grep aws_session_token | awk '{print $3}'`
-else
-  unset AWS_DEFAULT_PROFILE
-  unset AWS_PROFILE
-  unset AWS_PROFILE_NAME
+#else
+#  unset AWS_DEFAULT_PROFILE
+#  unset AWS_PROFILE
+#  unset AWS_PROFILE_NAME
 fi
 
 secrets_filename=${TF_VAR_PROJECT}-secrets-${ENV}.properties
