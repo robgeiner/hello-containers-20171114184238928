@@ -42,7 +42,7 @@ resource "aws_alb_listener_rule" "https-akamai-rule" {
   }
   condition {
     field = "host-header"
-    values = ["wca-convo-api-qa.sun-api.akadns.net"]
+    values = ["wca-convo-api.sun-api.akadns.net"]
   }
 }
 
