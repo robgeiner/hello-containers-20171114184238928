@@ -3,3 +3,5 @@ cognitive-devops-prod-remote-state-bucket/prod/us-west-2/_frontend_apps/ui-clust
 cognitive-devops-prod-remote-state-bucket/prod/us-west-2/_frontend_apps/ui-cluster/default-service/log/1500916157.destroy
 cognitive-devops-prod-remote-state-bucket/prod/us-west-2/_frontend_apps/ui-cluster/default-service/log/1500916578.destroy
 cognitive-devops-prod-remote-state-bucket/prod/us-west-2/_frontend_apps/ui-cluster/default-service/log/1500916635.apply
+cognitive-devops-prod-remote-state-bucket/prod/us-west-2/_frontend_apps/ui-cluster/default-service/log/1505783782.destroy
+cognitive-devops-prod-remote-state-bucket/prod/us-west-2/_frontend_apps/ui-cluster/default-service/log/1505784491.apply
