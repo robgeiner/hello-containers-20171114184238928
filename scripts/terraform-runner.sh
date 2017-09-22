@@ -101,19 +101,19 @@ export TF_VAR_ENVIRONMENT="$ENV"
 export TF_VAR_REGION="$REGION"
 export AWS_REGION="$REGION"
 
-if [[ -e "$PWD/common.properties" && -e "$PWD/${ENV}.properties" ]]; then
+if [[ -e "$PWD/properties/common.properties" && -e "$PWD/properties/${ENV}/env.properties" ]]; then
   echo "Sourcing.... common.properties"
-  source "$PWD/common.properties"
-  echo "Sourcing.... $PWD/${ENV}.properties"
-  source "$PWD/${ENV}.properties"
+  source "$PWD/properties/common.properties"
+  echo "Sourcing.... $PWD/properties/$ENV/env.properties"
+  source "$PWD/properties/$ENV/env.properties"
 else
-  echo "Error: verify that files 'common.properties' and '$ENV.properties' exist."
+  echo "Error: verify that files 'properties/common.properties' and 'properties/$ENV/env.properties' exist."
   exit 1
 fi
 
-if [ -e "$PWD/${ENV}/${REGION}.properties" ]; then
-    echo "Sourcing.... $PWD/${ENV}/${REGION}.properties"
-    source "$PWD/${ENV}/${REGION}.properties"
+if [ -e "$PWD/properties/${ENV}/regions/${REGION}.properties" ]; then
+    echo "Sourcing.... $PWD/properties/${ENV}/regions/${REGION}.properties"
+    source "$PWD/properties/${ENV}/regions/${REGION}.properties"
 fi
 
 if [ "$local" == "true" ]; then
