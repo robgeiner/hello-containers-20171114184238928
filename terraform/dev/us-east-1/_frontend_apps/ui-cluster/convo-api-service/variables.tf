@@ -1,4 +1,4 @@
-variable "app_version" { default = "f8060599a124b027c16b4c37c08a41aea9d4884b" }
+variable "app_version" { default = "d9742bd58fd1b0fcfa535d2a6ec9105da062fc69" }
 
 variable "config_version" { default = "81bd3dea47f5c410350132efcbb16dfa50578245" }
 
