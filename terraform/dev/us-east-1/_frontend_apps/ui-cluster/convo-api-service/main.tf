@@ -72,6 +72,10 @@ data "template_file" "task_template" {
         rank_and_retrieve_url = "${var.rank_and_retrieve_url}"
         rank_and_retrieve_username = "${var.RNR_USER}"
         rank_and_retrieve_password = "${var.RNR_PW}"
+        tone_analyzer_url = "${var.tone_analyzer_url}"
+        tone_analyzer_username = "${var.TONE_ANALYZER_USER}"
+        tone_analyzer_password = "${var.TONE_ANALYZER_PW}"
+        tone_analyzer_version_date = "${var.tone_analyzer_version_date}"
         weather_api_key = "${var.WEATHER_API_KEY}"
         download_s3_files = "${var.download_s3_files}"
     }
