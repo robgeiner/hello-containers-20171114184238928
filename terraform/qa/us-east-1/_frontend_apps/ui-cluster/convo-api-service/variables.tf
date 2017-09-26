@@ -85,6 +85,15 @@ variable "rank_and_retrieve_url" {
 variable "RNR_USER" {}
 variable "RNR_PW" {}
 
+variable "TONE_ANALYZER_USER" {}
+variable "TONE_ANALYZER_PW" {}
+variable "tone_analyzer_url" {
+  default = "https://gateway.watsonplatform.net/tone-analyzer/api"
+}
+variable "tone_analyzer_version_date" {
+  default = "2016-05-19"
+}
+
 variable "WEATHER_API_KEY" {}
 
 variable "NEW_RELIC_LICENSE_KEY" {}
