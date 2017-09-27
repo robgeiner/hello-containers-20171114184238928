@@ -91,7 +91,7 @@ variable "tone_analyzer_url" {
   default = "https://gateway.watsonplatform.net/tone-analyzer/api"
 }
 variable "tone_analyzer_version_date" {
-  default = "2016-05-19"
+  default = "2017-09-25"
 }
 
 variable "WEATHER_API_KEY" {}
