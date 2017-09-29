@@ -23,6 +23,7 @@
           { "name" : "PROFILER", "value" : "${profiler}" },
           { "name" : "ENV", "value" : "${environment}" },
           { "name" : "NODE_ENV", "value" : "${environment}" },
+          { "name" : "REGION", "value" : "${region}" },
           { "name" : "DEBUG", "value" : "${debug_options}" },
           { "name" : "BAR_QUEUE_ARN", "value" : "${bar_queue_arn}" },
           { "name" : "BAR_QUEUE_NAME", "value" : "${bar_queue_name}" },

@@ -58,6 +58,7 @@ data "template_file" "task_template" {
         cpu = "${var.cpu}"
         background = "${var.background}"
         environment = "${var.ENVIRONMENT}"
+        region = "${var.REGION}"
         log_level = "${var.log_level}"
         debug_options = "${var.debug_options}"
         memory = "${var.memory}"
