@@ -1,6 +1,6 @@
 variable "app_version" { default = "42be3f781812b229ba40e8334b62f35c82b750f4" }
 
-variable "config_version" { default = "dfbb5b486d9a0d6afe637d3deb73bb7e5059dcea" }
+variable "config_version" { default = "2c14bff39766449d89dd1f5669b51cd74897527d" }
 
 variable "log_level" {
   default = "info"
