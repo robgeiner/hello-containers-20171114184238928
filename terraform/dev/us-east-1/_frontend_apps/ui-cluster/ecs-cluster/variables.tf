@@ -1,5 +1,5 @@
 variable "ecs-cluster-ami" {
-  default = "ami-226d6834"
+  default = "ami-0fca0075"
 }
 
 variable "cluster_short_name" {
@@ -19,7 +19,7 @@ variable "chef_role" {
 }
 
 variable "chef_version" {
-   default = "12.13.37"
+   default = "12.16.42"
 }
 
 variable "instance_type" {
