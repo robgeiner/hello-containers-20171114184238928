@@ -1,4 +1,4 @@
-variable "version" { default = "75aa2e3ac0f49cf28b3dfc2bb0c96e528cdbcb49" }
+variable "version" { default = "92e6bf1cfabc3dc211f16d0316326983750cda88" }
 
 variable "log_level" {
   default = "info"
