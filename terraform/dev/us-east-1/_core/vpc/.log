@@ -7,3 +7,5 @@ cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_core/vpc/log/1499137705.
 cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_core/vpc/log/1499214990.destroy
 cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_core/vpc/log/1499273319.plan
 cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_core/vpc/log/1499273538.apply
+cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_core/vpc/log/1508447141.plan
+cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_core/vpc/log/1508447173.apply
