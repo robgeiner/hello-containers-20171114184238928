@@ -33,7 +33,3 @@ output "cluster_short_name" {
 output "ui_dns_name" {
   value = "${aws_route53_record.cogads-ui.fqdn}"
 }
-
-output "api_dns_name" {
-  value = "${aws_route53_record.cogads-convo-api.fqdn}"
-}

@@ -19,7 +19,7 @@ variable "chef_role" {
 }
 
 variable "chef_version" {
-   default = "12.13.37"
+   default = "12.16.42"
 }
 
 variable "instance_type" {
@@ -44,11 +44,11 @@ variable "docker_debug" {
 }
 
 variable "monitoring_agent_version" {
-  default = "11.0.5141-alpine"
+  default = "12.4.5181-alpine"
 }
 
 variable "ecs_agent_version" {
-  default = "v1.14.3"
+  default = "v1.14.5"
 }
 
 variable "ecs_agent_log_level" {

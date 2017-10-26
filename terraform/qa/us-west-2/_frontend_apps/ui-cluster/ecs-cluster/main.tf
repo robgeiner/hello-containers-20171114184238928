@@ -58,6 +58,9 @@ module "cluster" {
   chef_version = "${var.chef_version}"
   chef_organization = "${var.CHEF_ORGANIZATION}"
   chef_environment = "${var.CHEF_ENVIRONMENT}"
+  chef_server_url = "${var.CHEF_SERVER_URL}"
+  chef_client_name = "${var.CHEF_VALIDATION_CLIENT_NAME}"
+  chef_client_key = "${var.CHEF_VALIDATION_KEY_NAME}"
   ssh_key_name = "${var.SSH_KEY_NAME}"
   billing_id = "${var.BILLING_CODE}"
   bootstrap_bucket_name = "${var.PROJECT_BUCKET_PREFIX}-${var.ENVIRONMENT}-bootstrap"
@@ -120,14 +123,6 @@ resource "aws_alb_listener" "public-listener" {
 resource "aws_route53_record" "cogads-ui" {
   zone_id = "${data.terraform_remote_state.route53.zone_id}"
   name = "ui-${var.ENVIRONMENT}-${var.REGION}"
-  type = "CNAME"
-  ttl = "60"
-  records = ["${module.alb-public.dns_name}"]
-}
-
-resource "aws_route53_record" "cogads-convo-api" {
-  zone_id = "${data.terraform_remote_state.route53.zone_id}"
-  name = "${data.terraform_remote_state.service-registry.convo_api_name}-${var.ENVIRONMENT}-${var.REGION}"
   type = "CNAME"
   ttl = "60"
   records = ["${module.alb-public.dns_name}"]
