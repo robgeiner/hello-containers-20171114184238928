@@ -1,22 +1,29 @@
 output "external_lb_port" { value = "443" }
 output "external_lb_protocol" { value = "HTTPS" }
 
-output "chef_api_name" { value = "${var.chef_api_name}" }
-output "chef_api_port" { value = "${var.chef_api_port}" }
-output "chef_api_protocol" { value = "${var.chef_api_protocol}" }
-output "chef_api_global_priority" { value = "${var.chef_api_global_priority}" }
-output "chef_api_region_priority" { value = "${var.chef_api_region_priority}" }
-output "chef_api_healthcheck_protocol" { value = "${var.chef_api_healthcheck_protocol}" }
-output "chef_api_healthcheck_path" { value = "${var.chef_api_healthcheck_path}" }
-output "chef_api_region_hostname" { value = "api-${var.ENVIRONMENT}-${var.REGION}.${data.terraform_remote_state.route53.domain}" }
-output "chef_api_global_hostname" { value = "api.${data.terraform_remote_state.route53.domain}" }
+output "default_name" { value = "${var.default_name}" }
+output "default_port" { value = "${var.default_port}" }
+output "default_protocol" { value = "${var.default_protocol}" }
+output "default_priority" { value = "${var.default_priority}" }
+output "default_api_key" { value = "${var.default_api_key}" }
+output "default_path" { value = "${var.default_path}" }
+output "default_healthcheck_protocol" { value = "${var.default_healthcheck_protocol}" }
+output "default_healthcheck_path" { value = "${var.default_healthcheck_path}" }
 
-output "convo_api_name" { value = "${var.convo_api_name}" }
-output "convo_api_port" { value = "${var.convo_api_port}" }
-output "convo_api_protocol" { value = "${var.convo_api_protocol}" }
-output "convo_api_global_priority" { value = "${var.convo_api_global_priority}" }
-output "convo_api_region_priority" { value = "${var.convo_api_region_priority}" }
-output "convo_api_healthcheck_protocol" { value = "${var.convo_api_healthcheck_protocol}" }
-output "convo_api_healthcheck_path" { value = "${var.convo_api_healthcheck_path}" }
-output "convo_api_region_hostname" { value = "${var.convo_api_name}-${var.ENVIRONMENT}-${var.REGION}.${data.terraform_remote_state.route53.domain}" }
-output "convo_api_global_hostname" { value = "${var.convo_api_name}.${data.terraform_remote_state.route53.domain}" }
+output "verizon_name" { value = "${var.verizon_name}" }
+output "verizon_port" { value = "${var.verizon_port}" }
+output "verizon_protocol" { value = "${var.verizon_protocol}" }
+output "verizon_priority" { value = "${var.verizon_priority}" }
+output "verizon_api_key" { value = "${var.verizon_api_key}" }
+output "verizon_path" { value = "${var.verizon_path}" }
+output "verizon_healthcheck_protocol" { value = "${var.verizon_healthcheck_protocol}" }
+output "verizon_healthcheck_path" { value = "${var.verizon_healthcheck_path}" }
+
+output "hulu_name" { value = "${var.hulu_name}" }
+output "hulu_port" { value = "${var.hulu_port}" }
+output "hulu_protocol" { value = "${var.hulu_protocol}" }
+output "hulu_priority" { value = "${var.hulu_priority}" }
+output "hulu_api_key" { value = "${var.hulu_api_key}" }
+output "hulu_path" { value = "${var.hulu_path}" }
+output "hulu_healthcheck_protocol" { value = "${var.hulu_healthcheck_protocol}" }
+output "hulu_healthcheck_path" { value = "${var.hulu_healthcheck_path}" }
