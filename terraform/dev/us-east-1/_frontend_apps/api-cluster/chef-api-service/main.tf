@@ -63,12 +63,12 @@ data "template_file" "task_template" {
       newrelic_license_key = "${var.NEW_RELIC_LICENSE_KEY}"
       weather_api_key = "${var.WEATHER_API_KEY}"
       image_root = "${lookup(var.image_roots, var.ENVIRONMENT)}"
-      campbells_api_root = "http://cogads-be-cb-${lookup(var.hostnames, var.ENVIRONMENT)}"
-      campbells2017_api_root = "http://cogads-be-cb2-${lookup(var.hostnames, var.ENVIRONMENT)}"
-      ccrock_api_root = "http://cogads-be-cc-${lookup(var.hostnames, var.ENVIRONMENT)}"
-      hellmans_api_root = "http://cogads-be-hl-${lookup(var.hostnames, var.ENVIRONMENT)}"
-      swanson_api_root = "http://cogads-be-sw-${lookup(var.hostnames, var.ENVIRONMENT)}"
-      bonappnw_api_root = "http://cogads-be-ban-${lookup(var.hostnames, var.ENVIRONMENT)}"
+      campbells_api_root = "https://cogads-be-cb-${lookup(var.hostnames, var.ENVIRONMENT)}"
+      campbells2017_api_root = "https://cogads-be-cb2-${lookup(var.hostnames, var.ENVIRONMENT)}"
+      ccrock_api_root = "https://cogads-be-cc-${lookup(var.hostnames, var.ENVIRONMENT)}"
+      hellmans_api_root = "https://cogads-be-hl-${lookup(var.hostnames, var.ENVIRONMENT)}"
+      swanson_api_root = "https://cogads-be-sw-${lookup(var.hostnames, var.ENVIRONMENT)}"
+      bonappnw_api_root = "https://${var.CHEF_BE_USERNAME}:${var.CHEF_BE_PASSWORD}@cogads-be-ban-${lookup(var.hostnames, var.ENVIRONMENT)}"
     }
 }
 

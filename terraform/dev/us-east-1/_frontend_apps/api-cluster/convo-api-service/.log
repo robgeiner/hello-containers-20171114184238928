@@ -5,3 +5,5 @@ cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluste
 cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluster/convo-api-service/log/1508437604.destroy
 cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluster/convo-api-service/log/1508437679.apply
 cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluster/convo-api-service/log/1508442189.apply
+cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluster/convo-api-service/log/1508961054.plan
+cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluster/convo-api-service/log/1508961132.apply

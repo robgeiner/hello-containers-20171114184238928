@@ -64,12 +64,15 @@ variable "WEATHER_API_KEY" {}
 
 variable "NEW_RELIC_LICENSE_KEY" {}
 
+variable "CHEF_BE_USERNAME" {}
+variable "CHEF_BE_PASSWORD" {}
+
 
 variable "hostnames" {
   default = {
-    dev = "nonprod-useast1-int-lb.dev.cogads.weather.com:9080/IronChefUI/jaxrs/"
-    qa = "qa-useast1-int-lb.qa.cogads.weather.com:9080/IronChefUI/jaxrs/"
-    prod = "prod-useast1-int-lb.cogads.weather.com:9080/IronChefUI/jaxrs/"
+    dev = "nonprod-useast1-ext-lb.dev.cogads.weather.com/IronChefUI/jaxrs/"
+    qa = "qa-useast1-ext-lb.qa.cogads.weather.com/IronChefUI/jaxrs/"
+    prod = "prod-useast1-ext-lb.cogads.weather.com/IronChefUI/jaxrs/"
   }
 }
 

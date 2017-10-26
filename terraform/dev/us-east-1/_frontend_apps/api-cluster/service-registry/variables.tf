@@ -12,6 +12,6 @@ variable "chef_api_port" { default = "8080" }
 variable "chef_api_protocol" { default = "HTTP" }
 variable "chef_api_priority" { default = "800" }
 variable "chef_api_healthcheck_protocol" { default = "HTTP" }
-variable "chef_api_healthcheck_path" { default = "/watson-ads-convo/api/v1/systems/health" }
+variable "chef_api_healthcheck_path" { default = "/watson-ads-chef/api/v1/systems/health" }
 variable "chef_api_global_priority" { default = "200" }
 variable "chef_api_region_priority" { default = "201" }

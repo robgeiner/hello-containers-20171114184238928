@@ -1,0 +1,32 @@
+[0m[1mRefreshing Terraform state in-memory prior to plan...[0m
+The refreshed state will be used to calculate this plan, but will not be
+persisted to local or remote state storage.
+[0m
+[0m[1mdata.terraform_remote_state.logging: Refreshing state...[0m
+[0m[1mdata.terraform_remote_state.vpc: Refreshing state...[0m
+[0m[1mdata.terraform_remote_state.access-logs: Refreshing state...[0m
+[0m[1mdata.terraform_remote_state.bastion: Refreshing state...[0m
+[0m[1mdata.terraform_remote_state.iam: Refreshing state...[0m
+[0m[1mdata.terraform_remote_state.route53: Refreshing state...[0m
+[0m[1mdata.terraform_remote_state.service-registry: Refreshing state...[0m
+[0m[1maws_security_group.ecs_alb-public_ingress_sg: Refreshing state... (ID: sg-56107127)[0m
+[0m[1maws_security_group_rule.ecs_alb-public_ext_ingress_443: Refreshing state... (ID: sgrule-533423329)[0m
+[0m[1maws_alb_target_group.target: Refreshing state... (ID: arn:aws:elasticloadbalancing:us-east-1:...up/ads-dev-ui-default/f2b0d5389cecba07)[0m
+[0m[1maws_ecs_cluster.cluster: Refreshing state... (ID: arn:aws:ecs:us-east-1:543488454177:cluster/ads-ui-dev)[0m
+[0m[1maws_security_group.ecs_alb_sg: Refreshing state... (ID: sg-df0e6fae)[0m
+[0m[1maws_security_group.cluster_server_sg: Refreshing state... (ID: sg-580d6c29)[0m
+[0m[1mdata.template_file.services-parameters: Refreshing state...[0m
+[0m[1mdata.template_file.chef-overrides: Refreshing state...[0m
+[0m[1mdata.template_file.cluster_lc_ud: Refreshing state...[0m
+[0m[1maws_security_group_rule.ecs_alb_eph_ports: Refreshing state... (ID: sgrule-1371871140)[0m
+[0m[1maws_alb.alb: Refreshing state... (ID: arn:aws:elasticloadbalancing:us-east-1:...ads-dev-ui-public-alb/8461d21be5273ea6)[0m
+[0m[1maws_security_group_rule.cluster_server_eph_ports: Refreshing state... (ID: sgrule-1944874747)[0m
+[0m[1maws_security_group_rule.cluster_server_engress: Refreshing state... (ID: sgrule-728156296)[0m
+[0m[1maws_launch_configuration.cluster: Refreshing state... (ID: ads-ui-dev003445427c8c32a7602b4ef47d)[0m
+[0m[1maws_autoscaling_group.cluster: Refreshing state... (ID: ads-ui-dev-asg)[0m
+[0m[1maws_route53_record.cogads-ui: Refreshing state... (ID: Z3NZ1VOYE9MFRP_ui-dev-us-east-1_CNAME)[0m
+[0m[1maws_alb_listener.public-listener: Refreshing state... (ID: arn:aws:elasticloadbalancing:us-east-1:...-alb/8461d21be5273ea6/ac35b3c23979ec1d)[0m
+[0m[1maws_autoscaling_policy.cluster_scale_down: Refreshing state... (ID: ads-ui-dev cpu scale down)[0m
+[0m[1maws_autoscaling_policy.cluster_scale_up: Refreshing state... (ID: ads-ui-dev cpu scale up)[0m
+[0m[1maws_cloudwatch_metric_alarm.cluster_scale_up_cpu: Refreshing state... (ID: ads-ui-dev cpu)[0m
+[0m[1maws_cloudwatch_metric_alarm.cluster_scale_down_cpu: Refreshing state... (ID: ads-ui-dev scale down from cpu)[0m

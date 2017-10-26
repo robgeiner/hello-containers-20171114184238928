@@ -12,3 +12,15 @@ cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluste
 cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1508441109.apply
 cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1508443408.apply
 cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1508443492.apply
+cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1508970700.plan
+cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1508970750.apply
+cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1508971214.destroy
+cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1508971301.apply
+cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1508972526.apply
+cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1508972616.apply
+cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1508973749.apply
+cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1508976014.destroy
+cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1508976072.apply
+cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1508976440.destroy
+cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1508976670.apply
+cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1508977399.apply
