@@ -3,7 +3,7 @@ resource "aws_route53_record" "cogads-ui" {
   name = "ui"
   type = "CNAME"
   ttl = "60"
-  records = ["wca-ui-qa.sun-api.akadns.net"]
+  records = ["${data.terraform_remote_state.ui-service-registry.ui_akamai_hostname}"]
 }
 
 resource "aws_route53_record" "cogads-convo-api" {
@@ -11,7 +11,7 @@ resource "aws_route53_record" "cogads-convo-api" {
   name = "convo-api"
   type = "CNAME"
   ttl = "60"
-  records = ["wca-convo-api-qa.sun-api.akadns.net"]
+  records = ["${data.terraform_remote_state.api-service-registry.convo_api_akamai_hostname}"]
 }
 
 resource "aws_route53_record" "cogads-chef-api" {
@@ -19,5 +19,5 @@ resource "aws_route53_record" "cogads-chef-api" {
   name = "api"
   type = "CNAME"
   ttl = "60"
-  records = ["wca-api-qa.sun-api.akadns.net"]
+  records = ["${data.terraform_remote_state.api-service-registry.chef_api_akamai_hostname}"]
 }

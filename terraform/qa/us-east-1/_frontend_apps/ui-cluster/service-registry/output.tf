@@ -1,6 +1,8 @@
 output "external_lb_port" { value = "443" }
 output "external_lb_protocol" { value = "HTTPS" }
 
+output "ui_akamai_hostname" { value = "wca-ui-qa.sun-api.akadns.net" }
+
 output "default_name" { value = "${var.default_name}" }
 output "default_port" { value = "${var.default_port}" }
 output "default_protocol" { value = "${var.default_protocol}" }
