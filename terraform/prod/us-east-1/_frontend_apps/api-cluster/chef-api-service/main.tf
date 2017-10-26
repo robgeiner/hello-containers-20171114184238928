@@ -33,6 +33,19 @@ resource "aws_alb_listener_rule" "https-region-rule" {
   }
 }
 
+resource "aws_alb_listener_rule" "https-akamai-rule" {
+  listener_arn = "${data.terraform_remote_state.cluster.listener_public_arn}"
+  priority = "${data.terraform_remote_state.service-registry.chef_api_akamai_priority}"
+  action {
+    type = "forward"
+    target_group_arn = "${module.target_group.arn}"
+  }
+  condition {
+    field = "host-header"
+    values = ["${data.terraform_remote_state.service-registry.chef_api_akamai_hostname}"]
+  }
+}
+
 data "template_file" "task_template" {
     template = "${file("./task-definition-template.json")}"
     vars {
