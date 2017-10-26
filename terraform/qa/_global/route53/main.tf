@@ -13,3 +13,11 @@ resource "aws_route53_record" "cogads-convo-api" {
   ttl = "60"
   records = ["wca-convo-api-qa.sun-api.akadns.net"]
 }
+
+resource "aws_route53_record" "cogads-chef-api" {
+  zone_id = "${var.zone_id}"
+  name = "convo-api"
+  type = "CNAME"
+  ttl = "60"
+  records = ["wca-api-qa.sun-api.akadns.net"]
+}

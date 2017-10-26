@@ -17,3 +17,7 @@ output "ui_dns_name" {
 output "convo_api_dns_name" {
   value = "${aws_route53_record.cogads-convo-api.fqdn}"
 }
+
+output "chef_api_dns_name" {
+  value = "${aws_route53_record.cogads-chef-api.fqdn}"
+}
