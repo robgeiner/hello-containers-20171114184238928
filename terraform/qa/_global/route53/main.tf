@@ -16,7 +16,7 @@ resource "aws_route53_record" "cogads-convo-api" {
 
 resource "aws_route53_record" "cogads-chef-api" {
   zone_id = "${var.zone_id}"
-  name = "convo-api"
+  name = "api"
   type = "CNAME"
   ttl = "60"
   records = ["wca-api-qa.sun-api.akadns.net"]
