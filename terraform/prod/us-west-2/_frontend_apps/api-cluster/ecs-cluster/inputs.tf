@@ -46,8 +46,8 @@ data "terraform_remote_state" "bastion" {
 data "terraform_remote_state" "logging" {
   backend = "s3"
   config {
-    bucket = "${var.OWNER_NAME}-dev-remote-state-bucket"
-    key     = "dev/${var.REGION}/_core/logging/terraform.tfstate"
+    bucket = "${var.REMOTE_STATE_BUCKET_NAME}"
+    key     = "${var.ENVIRONMENT}/us-east-1/_core/logging/terraform.tfstate"
     region  = "${var.REMOTE_STATE_BUCKET_REGION}"
   }
 }

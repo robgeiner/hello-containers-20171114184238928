@@ -220,11 +220,16 @@ case "$VERB" in
         echo ">>>>>>>> Confirm CLEAN by entering the ENV: '$ENV'"
         read RESPONSE
         if [ $RESPONSE == $ENV ]; then
-          rm -f "$TERRAFORM_DIR/_backend.tf"
-          rm -f "$TERRAFORM_DIR/_variables.tf"
-          rm -f "$TERRAFORM_DIR/.log"
-          rm -rf "$TERRAFORM_DIR/.terraform"
-          rm -rf "$TERRAFORM_DIR/terraform.tfstate.backup"
+          if [ -d "$TERRAFORM_DIR" ]; then
+            rm -f "$TERRAFORM_DIR/_backend.tf"
+            rm -f "$TERRAFORM_DIR/_variables.tf"
+            rm -f "$TERRAFORM_DIR/.log"
+            rm -rf "$TERRAFORM_DIR/.terraform"
+            rm -rf "$TERRAFORM_DIR/terraform.tfstate.backup"
+          else
+            echo "$TERRAFORM_DIR does not exist"
+            exit 1
+          fi
         else
           echo "NOT CLEANING - Response: $RESPONSE"
           exit 1

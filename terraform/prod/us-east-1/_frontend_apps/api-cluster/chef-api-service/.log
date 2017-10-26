@@ -2,3 +2,7 @@ cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-clus
 cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1509029840.plan
 cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1509030025.apply
 cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1509030119.destroy
+cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1509031883.destroy
+cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1509031933.apply
+cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1509034198.destroy
+cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-cluster/chef-api-service/log/1509034793.apply

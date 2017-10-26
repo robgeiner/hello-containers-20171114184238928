@@ -16,3 +16,5 @@ cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/ui-clust
 cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/ui-cluster/ecs-cluster/log/1509026003.init
 cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/ui-cluster/ecs-cluster/log/1509026069.plan
 cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/ui-cluster/ecs-cluster/log/1509026130.apply
+cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/ui-cluster/ecs-cluster/log/1509031398.plan
+cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/ui-cluster/ecs-cluster/log/1509031534.apply

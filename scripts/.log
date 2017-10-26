@@ -5,3 +5,4 @@ cognitive-devops-dev-remote-state-bucket/dev/us-east-1/_frontend_apps/ui-cluster
 cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/ec-redis/log/1505766473.plan
 cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-cluster/chef-ui-services/log/1509029655.plan
 cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-cluster/chef-ui-service/log/1509029688.plan
+cognitive-devops-prod-remote-state-bucket/prod/us-west-2/_frontend_apps/api-cluster/repository/cconvo-api/app/log/1509042582.apply

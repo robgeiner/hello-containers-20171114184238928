@@ -4,3 +4,7 @@ cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-clus
 cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-cluster/ecs-cluster/log/1509027893.plan
 cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-cluster/ecs-cluster/log/1509028010.apply
 cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-cluster/ecs-cluster/log/1509029566.apply
+cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-cluster/ecs-cluster/log/1509031620.apply
+cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-cluster/ecs-cluster/log/1509033054.apply
+cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-cluster/ecs-cluster/log/1509034346.destroy
+cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-cluster/ecs-cluster/log/1509034578.apply
