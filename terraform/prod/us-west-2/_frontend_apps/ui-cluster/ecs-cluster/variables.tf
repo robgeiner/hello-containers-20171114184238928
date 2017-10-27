@@ -48,7 +48,7 @@ variable "monitoring_agent_version" {
 }
 
 variable "ecs_agent_version" {
-  default = "v1.14.6"
+  default = "v1.14.5"
 }
 
 variable "ecs_agent_log_level" {
