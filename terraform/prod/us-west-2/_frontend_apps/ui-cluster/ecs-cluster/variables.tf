@@ -1,5 +1,5 @@
 variable "ecs-cluster-ami" {
-  default = "ami-2272bd5a"
+  default = "ami-54d51b2c"
 }
 
 variable "cluster_short_name" {
