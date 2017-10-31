@@ -62,6 +62,7 @@ data "template_file" "task_template" {
       port = "${var.port}"
       project = "${var.PROJECT}"
       profiler = "${var.profiler}"
+      restart_count = "${var.restart_count}"
       bar_queue_arn = "${var.BAR_QUEUE_ARN}"
       bar_queue_name = "${var.BAR_QUEUE_NAME}"
       bar_read_access_key = "${var.BAR_READ_ACCESS_KEY}"

@@ -25,6 +25,7 @@
         { "name" : "NODE_ENV", "value" : "${environment}" },
         { "name" : "REGION", "value" : "${region}" },
         { "name" : "DEBUG", "value" : "${debug_options}" },
+        { "name" : "RESTART_COUNT", "value" : "${restart_count}" },
         { "name" : "BAR_QUEUE_ARN", "value" : "${bar_queue_arn}" },
         { "name" : "BAR_QUEUE_NAME", "value" : "${bar_queue_name}" },
         { "name" : "BAR_READ_ACCESS_KEY", "value" : "${bar_read_access_key}" },

@@ -8,6 +8,8 @@ variable "desired_count" {
   default = "2"
 }
 
+variable "restart_count" { default = "0" }
+
 variable "deployment_minimum_healthy_percent" {
   default = "50"
 }
