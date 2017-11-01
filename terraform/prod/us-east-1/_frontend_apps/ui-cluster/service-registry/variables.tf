@@ -24,14 +24,3 @@ variable "hulu_api_key" { default = "20c56a22-45d3-45d1-b133-306845bb9b1b"  }
 variable "hulu_path" { default = "/wa/" }
 variable "hulu_healthcheck_protocol" { default = "HTTP" }
 variable "hulu_healthcheck_path" { default = "/wa/health" }
-
-variable "convo_api_name" { default = "convo-api" }
-variable "convo_api_port" { default = "8080" }
-variable "convo_api_protocol" { default = "HTTP" }
-variable "convo_api_priority" { default = "900" }
-variable "convo_api_api_key" { default = "*"  }
-variable "convo_api_path" { default = "/watson-ads-convo/" }
-variable "convo_api_healthcheck_protocol" { default = "HTTP" }
-variable "convo_api_healthcheck_path" { default = "/watson-ads-convo/api/v1/systems/health" }
-variable "convo_api_global_priority" { default = "100" }
-variable "convo_api_region_priority" { default = "101" }
