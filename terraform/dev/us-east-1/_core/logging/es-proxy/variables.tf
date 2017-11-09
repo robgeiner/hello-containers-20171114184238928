@@ -18,6 +18,10 @@ variable "instance_type" {
   default = "t2.medium"
 }
 
-#variable "additional_ips" {
-#   default = "71.0.127.137/32"  # rob geiner home
-#}  # dev/devops home static ips
+variable "additional_ips" {
+   default = "71.0.127.137/32" # new Atlanta office and rob geiner home
+}  # dev/devops home static ips
+
+variable "ES_PROXY_USERNAME" {}
+
+variable "ES_PROXY_PASSWORD" {}

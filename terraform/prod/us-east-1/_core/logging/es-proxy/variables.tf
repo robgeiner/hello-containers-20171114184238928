@@ -21,3 +21,7 @@ variable "instance_type" {
 variable "additional_ips" {
    default = "71.0.127.137/32"  # rob geiner home
 }  # dev/devops home static ips
+
+variable "ES_PROXY_USERNAME" {}
+
+variable "ES_PROXY_PASSWORD" {}

@@ -124,26 +124,33 @@ resource "aws_elb" "es-proxy_ext_elb" {
 
 ######## Launch Configuration ###########
 data "template_file" "es-proxy_lc_ud" {
-  template = "${file("./bootstrap-userdata.template.sh")}"
+  template = "${file("${path.module}/bootstrap-userdata.template.sh")}"
   vars {
     environment = "${var.ENVIRONMENT}"
+    region = "${var.REGION}"
     node_name_prefix = "${var.PROJECT}-es-proxy"
     bootstrap_bucket_name = "${var.PROJECT_BUCKET_PREFIX}-${var.ENVIRONMENT}-bootstrap"
+    chef_server_url = "${var.CHEF_SERVER_URL}"
     chef_environment = "${var.CHEF_ENVIRONMENT}"
     chef_role = "${var.chef_role}"
     chef_version = "${var.chef_version}"
     chef_organization = "${var.CHEF_ORGANIZATION}"
-    region = "${var.REGION}"
+
     userdata = <<-EOF
     "twc-es-proxy": {
       "endpoint": {
         "hostname": "${data.terraform_remote_state.logging.endpoint}",
         "region": "${data.terraform_remote_state.logging.region}"
-        }
+      },
+      "user": {
+        "name": "${var.ES_PROXY_USERNAME}",
+        "password": "${var.ES_PROXY_PASSWORD}"
+      }
     }
     EOF
   }
 }
+
 
 resource "aws_launch_configuration" "es-proxy" {
     name_prefix = "${var.PROJECT}-es-proxy-lc"
