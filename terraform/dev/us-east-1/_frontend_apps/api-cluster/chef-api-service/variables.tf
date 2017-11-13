@@ -8,7 +8,7 @@ variable "desired_count" {
   default = "2"
 }
 
-variable "restart_count" { default = "not-set" }
+variable "restart_count" { default = "2017-11-13" }
 
 variable "deployment_minimum_healthy_percent" {
   default = "50"
