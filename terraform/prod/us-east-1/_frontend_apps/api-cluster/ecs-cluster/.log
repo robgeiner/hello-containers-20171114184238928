@@ -8,3 +8,4 @@ cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-clus
 cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-cluster/ecs-cluster/log/1509033054.apply
 cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-cluster/ecs-cluster/log/1509034346.destroy
 cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-cluster/ecs-cluster/log/1509034578.apply
+cognitive-devops-prod-remote-state-bucket/prod/us-east-1/_frontend_apps/api-cluster/ecs-cluster/log/1510251886.apply
